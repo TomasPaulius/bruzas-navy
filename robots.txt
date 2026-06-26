@@ -1,0 +1,24 @@
+# Kęstutis Bružas — allow all crawlers, including AI / answer engines
+User-agent: *
+Allow: /
+
+# AI search & answer engines (explicitly allowed for AEO/GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://bruzasnt.lt/sitemap.xml

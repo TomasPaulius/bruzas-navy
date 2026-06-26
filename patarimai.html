@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patarimai · Kęstutis Bružas · Nekilnojamojo turto patarėjas Vilniuje</title>
+  <meta name="description" content="Aiškūs nekilnojamojo turto patarimai parduodantiems ir perkantiems Vilniuje: kaina, eiga, vertinimas, pardavimas užsienyje gyvenantiems ir diskretiškas pardavimas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="theme-navy.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="canonical" href="https://bruzasnt.lt/patarimai" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Kęstučio Bružo patarimai",
+    "url": "https://bruzasnt.lt/patarimai",
+    "author": { "@type": "Person", "name": "Kęstutis Bružas" }
+  }
+  </script>
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html">Bružas<span>Nekilnojamasis turtas · Vilnius</span></a>
+      <nav class="nav-links">
+        <a href="index.html#kodel">Kodėl jis</a>
+        <a href="index.html#balsai">Klientų balsai</a>
+        <a href="patarimai.html">Patarimai</a>
+        <a href="index.html#objektai">Objektai</a>
+      </nav>
+      <a class="btn btn-line" href="index.html#kontaktai">Pasikalbėkime</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="wrap">
+        <p class="eyebrow">Patarimai</p>
+        <h1>Nekilnojamojo turto patarimai, kuriais pats vadovaujuosi</h1>
+        <p>Aiškūs atsakymai į klausimus, kuriuos dažniausiai užduoda parduodantys ir perkantys Vilniuje. Be vandens, iš 15+ metų praktikos.</p>
+      </div>
+    </section>
+
+    <section class="posts">
+      <div class="wrap">
+        <div class="post-grid">
+          <a class="post-card" href="straipsnis-komisinis.html" data-reveal>
+            <span class="post-tag">Kaina</span>
+            <h2>Kiek kainuoja parduoti NT Vilniuje</h2>
+            <p>Komisiniai, notaras, mokesčiai ir kas už ką moka. Viskas skaidriai, be paslėptų eilučių.</p>
+            <span class="post-more">Skaityti <span>→</span></span>
+          </a>
+          <a class="post-card" href="straipsnis-komisinis.html" data-reveal>
+            <span class="post-tag">Eiga</span>
+            <h2>Kaip parduoti butą Vilniuje</h2>
+            <p>Visa eiga nuo įvertinimo iki notaro, žingsnis po žingsnio, ir dažniausios klaidos.</p>
+            <span class="post-more">Skaityti <span>→</span></span>
+          </a>
+          <a class="post-card" href="straipsnis-komisinis.html" data-reveal>
+            <span class="post-tag">Vertinimas</span>
+            <h2>Kiek iš tikrųjų vertas jūsų butas</h2>
+            <p>Kaip nustatoma NT kaina Vilniuje ir kokie veiksniai ją kelia arba mažina.</p>
+            <span class="post-more">Skaityti <span>→</span></span>
+          </a>
+          <a class="post-card" href="straipsnis-komisinis.html" data-reveal>
+            <span class="post-tag">Sprendimas</span>
+            <h2>Ar verta samdyti NT brokerį</h2>
+            <p>Kada brokeris tikrai atsiperka, o kada galite parduoti patys be didelės rizikos.</p>
+            <span class="post-more">Skaityti <span>→</span></span>
+          </a>
+          <a class="post-card" href="straipsnis-komisinis.html" data-reveal>
+            <span class="post-tag">Užsienis</span>
+            <h2>Parduoti NT gyvenant užsienyje</h2>
+            <p>Kaip parduoti turtą Lietuvoje nuotoliu, dažnai neatvykstant nė karto.</p>
+            <span class="post-more">Skaityti <span>→</span></span>
+          </a>
+          <a class="post-card" href="straipsnis-komisinis.html" data-reveal>
+            <span class="post-tag">Diskretiškumas</span>
+            <h2>Kaip parduoti brangų turtą diskretiškai</h2>
+            <p>Pardavimas be viešo skelbimo, kai svarbu privatumas ir geriausia kaina.</p>
+            <span class="post-more">Skaityti <span>→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span class="footer-name">Kęstutis Bružas</span>
+      <span class="footer-mid">Nekilnojamojo turto patarėjas · Vilnius · 4,9 ★ Google</span>
+      <span class="footer-r">© 2026 · Capital Realty</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 24), { passive: true });
+    (() => {
+      const els = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+      const io = new IntersectionObserver((es) => { es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: .14, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(e => io.observe(e));
+    })();
+  </script>
+</body>
+</html>
