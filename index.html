@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="theme-navy.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#17283f" />
 
   <link rel="canonical" href="https://bruzasnt.lt/" />
   <!-- Open Graph / sharing -->
@@ -83,15 +86,17 @@
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a class="wordmark" href="#top">Bružas<span>Nekilnojamasis turtas · Vilnius</span></a>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navLinks">
         <a href="#kodel">Kodėl jis</a>
         <a href="#balsai">Klientų balsai</a>
         <a href="#eiga">Eiga</a>
         <a href="#zmogus">Apie</a>
         <a href="#objektai">Objektai</a>
         <a href="patarimai.html">Patarimai</a>
+        <a class="nav-cta-m" href="#kontaktai">Pasikalbėkime</a>
       </nav>
-      <a class="btn btn-line" href="#kontaktai">Pasikalbėkime</a>
+      <a class="btn btn-line nav-cta-d" href="#kontaktai">Pasikalbėkime</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Meniu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -106,13 +111,13 @@
             <span class="l l1">Jūsų turtas nusipelno</span>
             <span class="l l2">daugiau nei skelbimo.</span>
           </h1>
-          <p class="hero-sub">Jau 15 metų diskretiškai atstovauju Vilniaus savininkams: surandu tinkamą pirkėją, deruosi dėl geriausios kainos ir pasirūpinu viskuo nuo pirmo skambučio iki notaro.</p>
+          <p class="hero-sub">Jau 11 metų diskretiškai atstovauju Vilniaus savininkams: surandu tinkamą pirkėją, deruosi dėl geriausios kainos ir pasirūpinu viskuo nuo pirmo skambučio iki notaro.</p>
           <div class="hero-cta">
             <a class="btn btn-clay" href="#kontaktai">Aptarkime jūsų turtą</a>
           </div>
           <div class="hero-trust">
             <div class="ht"><b>4,9</b><span>★ Google · 87 atsiliepimai</span></div>
-            <div class="ht"><b>500+</b><span>šeimų pasirūpinta</span></div>
+            <div class="ht"><b>400+</b><span>parduotų objektų</span></div>
           </div>
         </div>
         <figure class="hero-portrait">
@@ -120,7 +125,7 @@
           <div class="hp-card">
             <img src="img/kestutis.jpg" alt="Kęstutis Bružas" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbportrait/900/1180'" />
           </div>
-          <figcaption class="hp-tag"><b>Kęstutis Bružas</b>Capital Realty · 15+ metų patirties</figcaption>
+          <figcaption class="hp-tag"><b>Kęstutis Bružas</b>Capital Realty · 11 metų patirties</figcaption>
         </figure>
       </div>
     </section>
@@ -160,7 +165,7 @@
           <article class="why-card" data-reveal>
             <span class="why-no">04</span>
             <h3>Derybos, ginančios jūsų kainą</h3>
-            <p>Šaltas protas ir 15+ metų patirtis. Nenuleidžiu kainos be reikalo ir apsaugau kiekvieną sandorio detalę.</p>
+            <p>Šaltas protas ir 11 metų patirtis. Nenuleidžiu kainos be reikalo ir apsaugau kiekvieną sandorio detalę.</p>
           </article>
           <article class="why-card" data-reveal>
             <span class="why-no">05</span>
@@ -230,9 +235,9 @@
     <!-- ===== NUMBERS ===== -->
     <section class="numbers">
       <div class="wrap num-row">
-        <div class="num" data-reveal><b data-count="15" data-suffix="+">0</b><span>metų rinkoje</span></div>
-        <div class="num" data-reveal><b data-count="500" data-suffix="+">0</b><span>sėkmingų sandorių</span></div>
-        <div class="num" data-reveal><b data-count="50" data-prefix="€" data-suffix=" mln.+">0</b><span>parduoto turto</span></div>
+        <div class="num" data-reveal><b data-count="11">0</b><span>metų rinkoje</span></div>
+        <div class="num" data-reveal><b data-count="400" data-suffix="+">0</b><span>parduotų objektų</span></div>
+        <div class="num" data-reveal><b data-count="30" data-prefix="€" data-suffix=" mln.+">0</b><span>sandorių vertė</span></div>
         <div class="num" data-reveal><b data-count="4.9" data-decimals="1">0</b><span>★ Google reitingas</span></div>
       </div>
     </section>
@@ -303,16 +308,15 @@
         </div>
         <div class="zm-media" data-reveal>
           <figure class="zm-main">
-            <img src="img/interjeras.jpg" alt="" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbman0/900/1100'" />
+            <img src="img/portrait-city.jpg" alt="Kęstutis Bružas Vilniuje" />
           </figure>
         </div>
       </div>
-      <!-- swap placeholders for real Instagram shots: img/life-1.jpg … life-4.jpg -->
       <div class="life-rail" data-reveal>
-        <img src="img/life-1.jpg" alt="" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbadv1/700/520'" />
-        <img src="img/life-2.jpg" alt="" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbadv2/700/520'" />
-        <img src="img/life-3.jpg" alt="" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbadv3/700/520'" />
-        <img src="img/life-4.jpg" alt="" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbadv4/700/520'" />
+        <img src="img/life-1.jpg" alt="Kalnų žygis" loading="lazy" />
+        <img src="img/life-2.jpg" alt="Banglenčių sportas prie vandenyno" loading="lazy" />
+        <img src="img/life-3.jpg" alt="Kelionė motociklu" loading="lazy" />
+        <img src="img/life-4.jpg" alt="Aitvarų sportas bangose" loading="lazy" />
       </div>
     </section>
 
@@ -324,17 +328,17 @@
           <h2 data-reveal>Objektai, kuriuos man patikėjo savininkai</h2>
         </div>
         <div class="obj-grid">
+          <a class="obj" href="https://www.capital.lt/lt/parduodamas-butas-bartu-g-16-burbiskese-vilniuje-5590-kvm-ploto-2-kambariai-p321238" target="_blank" rel="noopener" data-reveal>
+            <div class="obj-media"><span class="obj-badge">Parduodama</span><img src="img/obj-bartu.jpg" alt="Butas Bartų g., Vilnius" loading="lazy" /></div>
+            <div class="obj-info"><b>Butas · Bartų g., Vilnius</b><span>55,9 m² · 2 kambariai</span><strong class="obj-price">299 921 €</strong></div>
+          </a>
           <a class="obj" href="https://www.capital.lt/lt/parduodamas-namas-visoriu-g-36e-visoriuose-vilniuje-19800-kvm-ploto-3-aukstai-p322156" target="_blank" rel="noopener" data-reveal>
-            <div class="obj-media"><span class="obj-badge">Parduodama</span><img src="img/visoriai.jpg" alt="Namas Visoriuose" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbA/1000/750'" /></div>
-            <div class="obj-info"><b>Namas · Visoriai, Vilnius</b><span>198 m² · 5 kambariai</span><strong class="obj-price">449 964 €</strong></div>
+            <div class="obj-media"><span class="obj-badge">Parduodama</span><img src="img/obj-visoriu.jpg" alt="Namas Visorių g., Vilnius" loading="lazy" /></div>
+            <div class="obj-info"><b>Namas · Visorių g., Vilnius</b><span>198 m² · 5 kambariai</span><strong class="obj-price">449 964 €</strong></div>
           </a>
-          <a class="obj" href="https://www.capital.lt/lt/parduodamas-butas-pulko-g-3-zirmunuose-vilniuje-5600-kvm-ploto-3-kambariai-p303456" target="_blank" rel="noopener" data-reveal>
-            <div class="obj-media"><span class="obj-badge">Parduodama</span><img src="img/zirmunai.jpg" alt="Butas Žirmūnuose" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbB/1000/750'" /></div>
-            <div class="obj-info"><b>Butas · Žirmūnai, Vilnius</b><span>56 m² · 3 kambariai</span><strong class="obj-price">289 922 €</strong></div>
-          </a>
-          <a class="obj" href="https://www.capital.lt/lt/parduodamas-namas-aido-takas-20-palangoje-7400-kvm-ploto-2-aukstai-p299589" target="_blank" rel="noopener" data-reveal>
-            <div class="obj-media"><span class="obj-badge">Parduodama</span><img src="img/palanga.jpg" alt="Namas Palangoje" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbC/1000/750'" /></div>
-            <div class="obj-info"><b>Namas · Palanga</b><span>74 m² · prie jūros</span><strong class="obj-price">289 962 €</strong></div>
+          <a class="obj sold" href="https://www.capital.lt/lt/parduodamas-butas-s-skapo-g-5a-senamiestyje-vilniuje-3771-kvm-ploto-1-kambariai-p305542" target="_blank" rel="noopener" data-reveal>
+            <div class="obj-media"><span class="obj-badge sold">Parduota</span><img src="img/obj-skapo.jpg" alt="Butas S. Skapo g., Senamiestis" loading="lazy" /></div>
+            <div class="obj-info"><b>Butas · S. Skapo g., Senamiestis</b><span>37,7 m² · 1 kambarys</span><strong class="obj-price">169 961 €</strong></div>
           </a>
         </div>
         <div class="obj-foot" data-reveal>
@@ -385,7 +389,7 @@
             <a href="https://www.facebook.com/kestutisbruzasNT" target="_blank" rel="noopener">Facebook</a>
           </div>
         </div>
-        <form class="contact-form" id="contact-form" data-reveal>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST" data-reveal>
           <div class="field"><label>Vardas</label><input name="vardas" required placeholder="Jūsų vardas" /></div>
           <div class="field"><label>Telefonas</label><input name="telefonas" type="tel" required placeholder="+370" /></div>
           <div class="field"><label>Kuo galiu padėti?</label>
@@ -425,6 +429,14 @@
   <script>
     const nav = document.getElementById('nav');
     addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 24), { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    navToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    document.getElementById('navLinks').addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') nav.classList.remove('open');
+    });
 
     // hero load-in
     requestAnimationFrame(() => document.body.classList.add('loaded'));
@@ -467,10 +479,26 @@
       nums.forEach(n => io.observe(n));
     })();
 
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
+    const cf = document.getElementById('contact-form');
+    const showThanks = () => {
+      cf.innerHTML = '<div class="form-thanks">' +
+        '<span class="ft-check">&#10003;</span>' +
+        '<h3>Ačiū, gavau jūsų žinutę.</h3>' +
+        '<p>Susisieksiu su jumis asmeniškai, dažniausiai per 15 minučių.</p>' +
+        '<a class="ft-wa" href="https://wa.me/37060141131" target="_blank" rel="noopener">Arba parašykite iš karto per WhatsApp</a>' +
+      '</div>';
+    };
+    cf.addEventListener('submit', async (e) => {
       e.preventDefault();
-      e.target.querySelectorAll('input,textarea,select,button').forEach(el => el.disabled = true);
-      document.getElementById('form-success').hidden = false;
+      const action = cf.getAttribute('action') || '';
+      const btn = cf.querySelector('button[type=submit]');
+      if (action && !action.includes('YOUR_ID')) {
+        try {
+          if (btn) { btn.disabled = true; btn.textContent = 'Siunčiama...'; }
+          await fetch(action, { method: 'POST', body: new FormData(cf), headers: { Accept: 'application/json' } });
+        } catch (err) { /* show thanks anyway */ }
+      }
+      showThanks();
     });
   </script>
 </body>

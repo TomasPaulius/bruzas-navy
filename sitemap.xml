@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://bruzasnt.lt/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://bruzasnt.lt/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://bruzasnt.lt/patarimai</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bruzasnt.lt/patarimai/kiek-kainuoja-parduoti-nt-vilniuje</loc><priority>0.7</priority></url>
+  <url><loc>https://bruzasnt.lt/patarimai/kaip-parduoti-buta-vilniuje</loc><priority>0.7</priority></url>
+  <url><loc>https://bruzasnt.lt/patarimai/kiek-vertas-butas-vilniuje</loc><priority>0.7</priority></url>
+  <url><loc>https://bruzasnt.lt/patarimai/ar-verta-samdyti-brokeri</loc><priority>0.7</priority></url>
+  <url><loc>https://bruzasnt.lt/patarimai/parduoti-nt-gyvenant-uzsienyje</loc><priority>0.7</priority></url>
+  <url><loc>https://bruzasnt.lt/patarimai/diskretiskas-nt-pardavimas</loc><priority>0.7</priority></url>
 </urlset>
