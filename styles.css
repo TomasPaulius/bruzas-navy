@@ -364,6 +364,16 @@ em { font-style: italic; color: var(--emerald); font-weight: 500; }
 .obj.sold .obj-media::after { content: "Parduota"; position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; font-family: var(--fd); font-size: 26px; font-weight: 500; letter-spacing: .08em; color: var(--paper); text-transform: uppercase; }
 .obj.sold .obj-media::before { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 2; width: 168px; height: 52px; border: 1px solid rgba(242,238,227,.55); border-radius: 3px; }
 
+/* anchor jumps must clear the fixed nav */
+section[id], [id="kontaktai"], [id="objektai"], [id="zmogus"], [id="balsai"], [id="kodel"], [id="eiga"], [id="duk"] { scroll-margin-top: 96px; }
+
+/* hero google tag */
+.ht-google { display: flex; align-items: center; gap: 12px; }
+.ht-g { width: 30px; height: 30px; flex-shrink: 0; }
+.ht-google b { display: flex; align-items: baseline; gap: 8px; font-family: var(--fd); font-size: clamp(26px, 2.7vw, 36px); font-weight: 500; line-height: 1; color: var(--paper); letter-spacing: -.01em; }
+.ht-google .ht-gstars { font-style: normal; font-size: 15px; color: var(--bronze-soft); letter-spacing: 2px; }
+.ht-google span { font-size: 12px; color: var(--muted-d); margin-top: 7px; display: block; }
+
 /* review stars (no numeric rating) */
 .ht b.ht-stars { color: var(--bronze-soft); font-size: 22px; letter-spacing: 2px; }
 .num b.num-stars { font-size: clamp(30px, 3.4vw, 44px); letter-spacing: 4px; }

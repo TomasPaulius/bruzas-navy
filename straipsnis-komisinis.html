@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="theme-navy.css" />
   <link rel="stylesheet" href="blog.css" />
+  <noscript><style>[data-reveal]{opacity:1 !important;transform:none !important}</style></noscript>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <meta name="theme-color" content="#17283f" />
@@ -47,13 +48,15 @@
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a class="wordmark" href="index.html">Bružas<span>Nekilnojamasis turtas · Vilnius</span></a>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navLinks">
         <a href="index.html#kodel">Kodėl jis</a>
         <a href="index.html#balsai">Klientų balsai</a>
         <a href="patarimai.html">Patarimai</a>
         <a href="index.html#objektai">Objektai</a>
+        <a class="nav-cta-m" href="index.html#kontaktai">Pasikalbėkime</a>
       </nav>
-      <a class="btn btn-line" href="index.html#kontaktai">Pasikalbėkime</a>
+      <a class="btn btn-line nav-cta-d" href="index.html#kontaktai">Pasikalbėkime</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Meniu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -117,7 +120,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span class="footer-name">Kęstutis Bružas</span>
-      <span class="footer-mid">Nekilnojamojo turto patarėjas · Vilnius · 4,9 ★ Google</span>
+      <span class="footer-mid">Nekilnojamojo turto patarėjas · Vilnius · ★★★★★ Google</span>
       <span class="footer-r">© 2026 · Capital Realty</span>
     </div>
   </footer>
@@ -125,6 +128,15 @@
   <script>
     const nav = document.getElementById('nav');
     addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 24), { passive: true });
+    const navToggle = document.getElementById('navToggle');
+    if (navToggle) navToggle.addEventListener('click', () => { const o = nav.classList.toggle('open'); navToggle.setAttribute('aria-expanded', o); });
+    const nl = document.getElementById('navLinks');
+    if (nl) nl.addEventListener('click', (e) => { if (e.target.tagName === 'A') nav.classList.remove('open'); });
   </script>
+  <div class="sticky-cta">
+    <img class="sc-photo" src="img/kestutis.jpg" alt="Kęstutis Bružas" />
+    <div class="sc-text"><b>Kęstutis Bružas</b><span>Atsakau per ~15 min.</span></div>
+    <a class="sc-btn" href="https://m.me/kestutisbruzasNT" target="_blank" rel="noopener">Parašyti žinutę</a>
+  </div>
 </body>
 </html>
