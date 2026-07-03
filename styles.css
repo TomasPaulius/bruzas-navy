@@ -289,9 +289,38 @@ em { font-style: italic; color: var(--emerald); font-weight: 500; }
   .tl-step { grid-template-columns: 56px 1fr; gap: 18px; }
   .tl-no { width: 54px; height: 54px; font-size: 21px; }
   .tl-step::before { left: 27px; top: 50px; }
-  .voices-foot { flex-direction: column; align-items: flex-start; }
+  .voices-foot { flex-direction: column; align-items: flex-start; gap: 16px; }
   .nav-inner { padding: 18px 20px; }
   .footer-inner { flex-direction: column; text-align: center; }
+
+  /* --- mobile flow: tighter vertical rhythm --- */
+  :root { --pad: 58px; }
+  .hero-sub { margin-bottom: 26px; }
+  .hero-cta { margin-bottom: 26px; }
+  .statement { padding: 52px 0; }
+  .state-line { font-size: clamp(27px, 7.6vw, 38px); }
+  .state-sub { margin-top: 22px; font-size: 15.5px; }
+  .sec-head { margin-bottom: 30px; }
+  .why-grid { gap: 13px; }
+  .why-card { padding: 27px 24px 25px; }
+  .why-no { margin-bottom: 14px; }
+  .why-card h3 { font-size: 21px; }
+  .valuation { padding: 50px 0; }
+  .valuation h2 { font-size: 26px; }
+  .voice-feature p { font-size: clamp(23px, 6.4vw, 30px); }
+  .voice-feature footer { margin-top: 20px; }
+  .num-row { gap: 30px; }
+  .tl-body { padding-top: 3px; }
+  .tl-body h3 { font-size: 23px; }
+  .tl-step { padding-bottom: 34px; }
+  .zm-lead { font-size: 16px; }
+  .zm-quote { font-size: 19px; margin-top: 24px; }
+  .life-rail { margin-top: 34px; }
+  .obj-info { padding: 19px 22px 23px; }
+  .obj-foot { gap: 15px; }
+  .faq-item summary { padding: 19px 2px; }
+  .contact-person h2 { font-size: 29px; }
+  .contact-details { margin: 26px 0 22px; }
 }
 
 /* ===== VALUATION / LEAD MAGNET ===== */
