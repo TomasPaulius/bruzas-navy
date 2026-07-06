@@ -61,6 +61,8 @@ em { font-style: italic; color: var(--emerald); font-weight: 500; }
 .nav { position: fixed; inset: 0 0 auto 0; z-index: 900; transition: background .4s var(--ease), box-shadow .4s; }
 .nav-inner { max-width: 1340px; margin: 0 auto; padding: 24px clamp(22px, 5vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .wordmark { font-family: var(--fd); font-size: 25px; font-weight: 600; color: var(--paper); line-height: 1; letter-spacing: -.01em; transition: color .4s; }
+.wordmark .wm-nt { color: var(--bronze-soft); font-weight: 600; font-style: normal; }
+.nav.scrolled .wordmark .wm-nt { color: var(--bronze); }
 .wordmark span { display: block; font-family: var(--fb); font-size: 9.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--bronze-soft); margin-top: 6px; }
 .nav-links { display: flex; gap: 30px; font-size: 13.5px; font-weight: 500; }
 .nav-links a { color: rgba(242,238,227,.78); position: relative; transition: color .25s; }
@@ -334,6 +336,23 @@ em { font-style: italic; color: var(--emerald); font-weight: 500; }
 .val-sub { color: rgba(242,238,227,.78); font-size: 16.5px; max-width: 52ch; }
 .val-btn { flex-shrink: 0; }
 
+/* ===== REEL / PERSONAL ATTENTION ===== */
+.reel-sec { padding: var(--pad) 0; background: var(--ink); color: var(--paper); overflow: hidden; }
+.reel-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px, 5.5vw, 84px); align-items: center; }
+.reel-text .eyebrow { color: var(--bronze-soft); }
+.reel-text .eyebrow::before { background: var(--bronze); }
+.reel-text h2 { color: var(--paper); margin-bottom: 22px; line-height: 1.08; }
+.reel-lead { font-size: 17px; line-height: 1.7; color: rgba(242,238,227,.76); max-width: 48ch; }
+.reel-note { margin-top: 16px; font-family: var(--fd); font-style: italic; font-size: 19px; color: var(--bronze-soft); }
+.reel-video { position: relative; display: block; width: 100%; max-width: 330px; margin: 0 auto; aspect-ratio: 9 / 16; border-radius: 10px; overflow: hidden; box-shadow: 0 44px 90px -38px rgba(0,0,0,.75); border: 1px solid var(--line-d); }
+.reel-video img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.reel-video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,17,13,.05) 40%, rgba(15,17,13,.62)); }
+.reel-video:hover img { transform: scale(1.05); }
+.reel-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; width: 70px; height: 70px; border-radius: 50%; background: rgba(242,238,227,.94); display: grid; place-items: center; box-shadow: 0 12px 30px -8px rgba(0,0,0,.5); transition: transform .3s var(--ease); }
+.reel-video:hover .reel-play { transform: translate(-50%, -50%) scale(1.08); }
+.reel-play svg { width: 27px; height: 27px; fill: var(--emerald); margin-left: 3px; }
+.reel-tag { position: absolute; left: 0; right: 0; bottom: 20px; z-index: 2; text-align: center; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--paper); }
+
 /* dark button on light bg */
 .btn-solid { background: var(--emerald); color: var(--paper); }
 .btn-solid:hover { background: var(--emerald-d); transform: translateY(-2px); box-shadow: 0 14px 30px -14px rgba(0,0,0,.4); }
@@ -428,17 +447,35 @@ a.vf-note:hover { color: var(--bronze-soft); }
 @media (max-width: 1000px) {
   .nav-toggle { display: flex; }
   .nav-cta-d { display: none; }
+  /* when open, drop the scrolled backdrop-filter so the fixed overlay can fill the viewport */
+  .nav.open { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: none; }
+  /* full-screen solid overlay menu */
   .nav-links {
-    display: flex; flex-direction: column; gap: 0;
-    position: fixed; top: 64px; left: 12px; right: 12px;
-    background: var(--emerald); border: 1px solid rgba(var(--accent-soft-rgb),.28);
-    border-radius: 14px; padding: 10px 22px 18px;
-    transform: translateY(-14px); opacity: 0; pointer-events: none;
-    transition: transform .35s var(--ease), opacity .35s;
-    box-shadow: 0 26px 54px -20px rgba(0,0,0,.65); z-index: 1;
+    display: flex; flex-direction: column; justify-content: center; gap: 0;
+    position: fixed; inset: 0;
+    background: var(--emerald);
+    padding: 104px 34px 48px;
+    transform: translateY(-100%);
+    transition: transform .42s var(--ease);
+    z-index: 2; overflow-y: auto;
   }
-  .nav.open .nav-links { transform: translateY(0); opacity: 1; pointer-events: auto; }
-  .nav-links a { color: var(--paper); font-family: var(--fd); font-size: 20px; font-weight: 500; padding: 13px 2px; border-bottom: 1px solid var(--line-d); }
+  .nav.open .nav-links { transform: translateY(0); }
+  .nav-links a,
+  .nav.scrolled .nav-links a { color: var(--paper); font-family: var(--fd); font-size: 26px; font-weight: 500; letter-spacing: -.01em; padding: 17px 2px; border-bottom: 1px solid rgba(242,238,227,.14); }
   .nav-links a::after { display: none; }
-  .nav-links a.nav-cta-m { display: block; margin-top: 12px; background: var(--paper); color: var(--emerald); font-family: var(--fb); font-size: 14px; font-weight: 700; text-align: center; border-radius: 9px; padding: 14px; border-bottom: none; }
+  .nav-links a.nav-cta-m,
+  .nav.scrolled .nav-links a.nav-cta-m { display: block; margin-top: 24px; background: var(--paper); color: var(--emerald); font-family: var(--fb); font-size: 15px; font-weight: 700; letter-spacing: .01em; text-align: center; border-radius: 10px; padding: 17px; border-bottom: none; }
+  /* keep brand + toggle legible above the overlay */
+  .wordmark, .nav-toggle { position: relative; z-index: 3; }
+  .nav.open .wordmark, .nav.open.scrolled .wordmark { color: var(--paper); }
+  .nav.open .wordmark span, .nav.open.scrolled .wordmark span { color: var(--bronze-soft); }
+  .nav.open .wm-nt, .nav.open.scrolled .wm-nt { color: var(--bronze-soft); }
+  .nav.open .nav-toggle span, .nav.open.scrolled .nav-toggle span { background: var(--paper); }
+}
+
+/* reel stacks on tablet/mobile (placed after base .reel-grid to win source order) */
+@media (max-width: 1000px) {
+  .reel-grid { grid-template-columns: 1fr; gap: 34px; }
+  .reel-text { max-width: 580px; }
+  .reel-video { max-width: 300px; }
 }
