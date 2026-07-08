@@ -296,12 +296,12 @@
           <p class="reel-lead">Jūsų turto neperduodu asistentams: paklausos sukūrimas, apžiūros ir derybos yra mano rankose. Būtent čia, o ne skelbime, gimsta geriausia kaina.</p>
           <p class="reel-note">Pažiūrėkite, kaip tai atrodo iš arčiau.</p>
         </div>
-        <!-- Reel: replace this <a> with Kęstučio konkretaus reel'o embed arba <video src="img/reel.mp4">, poster keičiamas į reel'o kadrą -->
-        <a class="reel-video" href="https://www.instagram.com/bruzas_nt" target="_blank" rel="noopener" data-reveal aria-label="Žiūrėti vaizdo įrašą">
-          <img src="img/kestutis.jpg" alt="Kęstutis Bružas dirba" loading="lazy" />
+        <!-- Reel: YouTube Short, loaded on click (facade). Change data-yt to swap the video. -->
+        <div class="reel-video" data-yt="X-_gJaT-dTc" role="button" tabindex="0" data-reveal aria-label="Žiūrėti Kęstučio vaizdo įrašą">
+          <img src="img/portrait-city.jpg" alt="Kęstutis Bružas dirba" loading="lazy" />
           <span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span>
           <span class="reel-tag">Žiūrėti, kaip dirbu</span>
-        </a>
+        </div>
       </div>
     </section>
 
@@ -458,6 +458,27 @@
     document.getElementById('navLinks').addEventListener('click', (e) => {
       if (e.target.tagName === 'A') nav.classList.remove('open');
     });
+
+    // reel: load YouTube Short on click (facade)
+    (() => {
+      const reel = document.querySelector('.reel-video[data-yt]');
+      if (!reel) return;
+      const play = () => {
+        if (reel.classList.contains('playing')) return;
+        const id = reel.getAttribute('data-yt');
+        const f = document.createElement('iframe');
+        f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+        f.title = 'Kęstutis Bružas';
+        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        f.setAttribute('allowfullscreen', '');
+        f.loading = 'lazy';
+        reel.innerHTML = '';
+        reel.appendChild(f);
+        reel.classList.add('playing');
+      };
+      reel.addEventListener('click', play);
+      reel.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
+    })();
 
     // hero load-in
     requestAnimationFrame(() => document.body.classList.add('loaded'));
