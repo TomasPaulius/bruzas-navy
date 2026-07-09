@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kęstutis Bružas · Asmeninis nekilnojamojo turto patarėjas Vilniuje</title>
-  <meta name="description" content="Kęstutis Bružas, asmeninis nekilnojamojo turto patarėjas Vilniuje. Perduodate raktus, viskuo pasirūpina jis. Diskretiškas, asmeniškas aptarnavimas parduodant ir perkant. Google įvertinimas 5/5." />
+  <meta name="description" content="Kęstutis Bružas, asmeninis nekilnojamojo turto patarėjas Vilniuje. Perduodate raktus, viskuo pasirūpina jis. Asmeniškas aptarnavimas parduodant ir perkant. Google įvertinimas 5/5." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -21,13 +21,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bruzasnt.lt/" />
   <meta property="og:title" content="Kęstutis Bružas · Nekilnojamojo turto patarėjas Vilniuje" />
-  <meta property="og:description" content="Diskretiškas, asmeniškas brangaus turto pardavimas Vilniuje. Perduodate raktus, viskuo pasirūpina jis. Google įvertinimas 5/5." />
+  <meta property="og:description" content="Asmeniškas brangaus turto pardavimas Vilniuje. Perduodate raktus, viskuo pasirūpina jis. Google įvertinimas 5/5." />
   <!-- TODO: swap to https://bruzasnt.lt/img/kestutis.jpg when domain is connected -->
   <meta property="og:image" content="https://tomaspaulius.github.io/bruzas-navy/img/kestutis.jpg" />
   <meta property="og:locale" content="lt_LT" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kęstutis Bružas · Nekilnojamojo turto patarėjas Vilniuje" />
-  <meta name="twitter:description" content="Diskretiškas, asmeniškas brangaus turto pardavimas Vilniuje. Google įvertinimas 5/5." />
+  <meta name="twitter:description" content="Asmeniškas brangaus turto pardavimas Vilniuje. Google įvertinimas 5/5." />
   <meta name="twitter:image" content="https://tomaspaulius.github.io/bruzas-navy/img/kestutis.jpg" />
 
   <!-- Structured data: helps Google + AI engines (ChatGPT, Perplexity, AI Overviews) read the facts -->
@@ -40,7 +41,7 @@
     "url": "https://bruzasnt.lt/",
     "image": "https://bruzasnt.lt/img/kestutis.jpg",
     "jobTitle": "Nekilnojamojo turto patarėjas",
-    "description": "Asmeninis nekilnojamojo turto patarėjas Vilniuje. Diskretiškas brangaus turto pardavimas, pirkimas ir vertinimas.",
+    "description": "Asmeninis nekilnojamojo turto patarėjas Vilniuje. Brangaus turto pardavimas, pirkimas ir vertinimas.",
     "telephone": "+37060141131",
     "email": "kestutis.bruzas@capitalrealty.com",
     "priceRange": "€€€",
@@ -95,17 +96,18 @@
 <body>
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="wordmark" href="#top">Bružas <b class="wm-nt">NT</b><span>Nekilnojamasis turtas · Vilnius</span></a>
+      <a class="wordmark" href="#top">Bružas <b class="wm-nt">NT</b><span data-en="Real estate · Vilnius">Nekilnojamasis turtas · Vilnius</span></a>
       <nav class="nav-links" id="navLinks">
-        <a href="#kodel">Kodėl jis</a>
-        <a href="#balsai">Klientų balsai</a>
-        <a href="#eiga">Eiga</a>
-        <a href="#zmogus">Apie</a>
-        <a href="#objektai">Objektai</a>
-        <a href="patarimai.html">Patarimai</a>
-        <a class="nav-cta-m" href="#kontaktai">Pasikalbėkime</a>
+        <a href="#kodel" data-en="Why him">Kodėl jis</a>
+        <a href="#balsai" data-en="Reviews">Klientų balsai</a>
+        <a href="#eiga" data-en="Process">Eiga</a>
+        <a href="#zmogus" data-en="About">Apie</a>
+        <a href="#objektai" data-en="Properties">Objektai</a>
+        <a href="patarimai.html" data-en="Guides">Patarimai</a>
+        <a class="nav-cta-m" href="#kontaktai" data-en="Let's talk">Pasikalbėkime</a>
       </nav>
-      <a class="btn btn-line nav-cta-d" href="#kontaktai">Pasikalbėkime</a>
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch to English">EN</button>
+      <a class="btn btn-line nav-cta-d" href="#kontaktai" data-en="Let's talk">Pasikalbėkime</a>
       <button class="nav-toggle" id="navToggle" aria-label="Meniu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -116,39 +118,41 @@
     <section class="hero">
       <div class="hero-wrap">
         <div class="hero-text">
-          <p class="kicker">Privatus nekilnojamojo turto patarėjas · Vilnius</p>
+          <p class="kicker" data-en="One person · your entire sale">Vienas žmogus · visas jūsų turto pardavimas</p>
           <h1 class="hero-h1">
-            <span class="l l1">Jūsų turtas nusipelno</span>
-            <span class="l l2">daugiau nei skelbimo.</span>
+            <span class="l l1" data-en="Your property deserves">Jūsų turtas nusipelno</span>
+            <span class="l l2" data-en="more than a listing.">daugiau nei skelbimo.</span>
           </h1>
-          <p class="hero-sub">Jau 11 metų diskretiškai atstovauju Vilniaus savininkams: surandu tinkamą pirkėją, deruosi dėl geriausios kainos ir pasirūpinu viskuo nuo pirmo skambučio iki notaro.</p>
-          <div class="hero-cta">
-            <a class="btn btn-clay" href="#kontaktai">Aptarkime jūsų turtą</a>
-          </div>
-          <div class="hero-trust">
-            <div class="ht ht-google">
-              <svg class="ht-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
-              <div><b>5/5 <i class="ht-gstars">★★★★★</i></b><span>Google atsiliepimai</span></div>
-            </div>
-            <div class="ht"><b>400+</b><span>parduotų objektų</span></div>
-          </div>
+          <p class="hero-sub" data-en="For 11 years I've represented owners in Vilnius: I find the right buyer, negotiate the best price and handle everything from the first call to the notary.">Jau 11 metų atstovauju Vilniaus savininkams: surandu tinkamą pirkėją, deruosi dėl geriausios kainos ir pasirūpinu viskuo nuo pirmo skambučio iki notaro.</p>
         </div>
         <figure class="hero-portrait">
           <span class="hp-panel" aria-hidden="true"></span>
           <div class="hp-card">
             <img src="img/kestutis.jpg" alt="Kęstutis Bružas" fetchpriority="high" />
           </div>
-          <figcaption class="hp-tag"><b>Kęstutis Bružas</b>Capital Realty · 11 metų patirties</figcaption>
+          <figcaption class="hp-tag"><b>Kęstutis Bružas</b><span data-en="Capital Realty · 11 years' experience">Capital Realty · 11 metų patirties</span></figcaption>
         </figure>
+        <div class="hero-actions">
+          <div class="hero-cta">
+            <a class="btn btn-clay" href="#kontaktai" data-en="Let's talk about your property">Aptarkime jūsų turtą</a>
+          </div>
+          <div class="hero-trust">
+            <div class="ht ht-google">
+              <svg class="ht-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+              <div><b>5/5 <i class="ht-gstars">★★★★★</i></b><span data-en="Google reviews">Google atsiliepimai</span></div>
+            </div>
+            <div class="ht"><b>400+</b><span data-en="properties sold">parduotų objektų</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ===== STATEMENT ===== -->
     <section class="statement">
       <div class="wrap">
-        <p class="state-line" data-reveal>Žmonės pas mane perka <span class="nb">ne būstą.</span></p>
-        <p class="state-line big" data-reveal>Jie perka ramybę.</p>
-        <p class="state-sub" data-reveal>Dėmesys, kokio tikėtumėtės iš asmeninio bankininko ar šeimos gydytojo. Tik čia jis skirtas jūsų turtui.</p>
+        <p class="state-line" data-reveal data-en="People don't come to me for <span class='nb'>a home.</span>">Žmonės pas mane perka <span class="nb">ne būstą.</span></p>
+        <p class="state-line big" data-reveal data-en="They come for peace of mind.">Jie perka ramybę.</p>
+        <p class="state-sub" data-reveal data-en="The kind of attention you'd expect from a private banker or your family doctor. Only here it's devoted to your property.">Dėmesys, kokio tikėtumėtės iš asmeninio bankininko ar šeimos gydytojo. Tik čia jis skirtas jūsų turtui.</p>
       </div>
     </section>
 
@@ -156,39 +160,39 @@
     <section class="why" id="kodel">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow" data-reveal>Kodėl Kęstutis</p>
-          <h2 data-reveal>Šešios priežastys turtą patikėti būtent man</h2>
+          <p class="eyebrow" data-reveal data-en="Why Kęstutis">Kodėl Kęstutis</p>
+          <h2 data-reveal data-en="Six reasons to trust your property to me">Šešios priežastys turtą patikėti būtent man</h2>
         </div>
         <div class="why-grid">
           <article class="why-card" data-reveal>
             <span class="why-no">01</span>
-            <h3>Paklausos sukūrimas</h3>
-            <p>Profesionalus pristatymas ir tikslinga rinkodara sukuria susidomėjimą ir pirkėjų konkurenciją. Kai objekto nori keli pirkėjai, kaina auga savaime.</p>
+            <h3 data-en="Demand and targeted marketing">Paklausos sukūrimas ir tikslingas marketingas</h3>
+            <p data-en="Professional presentation and focused marketing create competition between buyers and help you sell at the price you want.">Profesionalus pristatymas ir tikslinga rinkodara sukuria pirkėjų konkurenciją ir padeda parduoti už norimą kainą.</p>
           </article>
           <article class="why-card" data-reveal>
             <span class="why-no">02</span>
-            <h3>Apžiūra, kuri parduoda</h3>
-            <p>Apžiūros metu leidžiu pirkėjui pajausti erdvę ir atskleidžiu būtent jam svarbius būsto privalumus. Taip pirkėjas ne apžiūri, o įsimyli.</p>
+            <h3 data-en="A viewing that sells">Apžiūra, kuri parduoda</h3>
+            <p data-en="During the viewing I let the buyer feel the space and reveal the details that matter to them. So they see not square meters, but a place they'll want to live in.">Apžiūros metu leidžiu pirkėjui pajausti erdvę ir atskleidžiu būtent jam svarbius būsto privalumus. Taip pirkėjas mato ne kvadratinius metrus, o vietą, kurioje norės gyventi.</p>
           </article>
           <article class="why-card" data-reveal>
             <span class="why-no">03</span>
-            <h3>Derybos, ginančios jūsų kainą</h3>
-            <p>Šaltas protas ir 11 metų patirtis. Be reikalo nenuleidžiu kainos ir ramiai išsideriu geriausią įmanomą rezultatą.</p>
+            <h3 data-en="Negotiation that defends your price">Derybos, ginančios jūsų kainą</h3>
+            <p data-en="A cool head and 11 years of experience. I never drop the price without reason and calmly negotiate the best possible result.">Šaltas protas ir 11 metų patirtis. Be reikalo nenuleidžiu kainos ir ramiai išsideriu geriausią įmanomą rezultatą.</p>
           </article>
           <article class="why-card" data-reveal>
             <span class="why-no">04</span>
-            <h3>Diskretiškas pardavimas</h3>
-            <p>Jūsų turtas, kaina ir aplinkybės lieka tarp mūsų. Prireikus parduodu tyliai, be skelbimų portaluose ir nereikalingo dėmesio.</p>
+            <h3 data-en="A circle of buyers already waiting">Pirkėjų ratas, kuris jau laukia</h3>
+            <p data-en="Over 11 years I've built a network of trusted buyers and investors. Some properties sell before they ever reach the listing portals.">Per 11 metų sukaupiau patikimų pirkėjų ir investuotojų tinklą. Dalis objektų parduodami dar prieš pasirodant portaluose.</p>
           </article>
           <article class="why-card" data-reveal>
             <span class="why-no">05</span>
-            <h3>Vienas žmogus, visas procesas</h3>
-            <p>Nuo vertinimo iki notaro jus lydi tas pats žmogus. Nieko nereikės pasakoti iš naujo ar priminti po kelis kartus.</p>
+            <h3 data-en="One person, the whole process">Vienas žmogus, visas procesas</h3>
+            <p data-en="From valuation to the notary, the same person is with you. You'll never have to explain things again or remind anyone twice.">Nuo vertinimo iki notaro jus lydi tas pats žmogus. Nieko nereikės pasakoti iš naujo ar priminti po kelis kartus.</p>
           </article>
           <article class="why-card" data-reveal>
             <span class="why-no">06</span>
-            <h3>Ryšys, kuris išlieka</h3>
-            <p>Daugelis klientų grįžta su kitu turtu ir rekomenduoja artimiausiems. Tai geriausias mano darbo įvertinimas.</p>
+            <h3 data-en="A relationship that lasts">Ryšys, kuris išlieka</h3>
+            <p data-en="Many clients come back with another property and recommend me to those closest to them. That's the best measure of my work.">Daugelis klientų grįžta su kitu turtu ir rekomenduoja artimiausiems. Tai geriausias mano darbo įvertinimas.</p>
           </article>
         </div>
       </div>
@@ -198,16 +202,16 @@
     <section class="reel-sec" id="darbas">
       <div class="wrap reel-grid">
         <div class="reel-text" data-reveal>
-          <p class="eyebrow bronze">Iš arčiau</p>
-          <h2>Kiekvienam objektui skiriu tiek dėmesio, tarsi jis būtų vienintelis</h2>
-          <p class="reel-lead">Jūsų turto neperduodu asistentams: paklausos sukūrimas, apžiūros ir derybos yra mano rankose. Būtent čia, o ne skelbime, gimsta geriausia kaina.</p>
-          <p class="reel-note">Pažiūrėkite, kaip tai atrodo iš arčiau.</p>
+          <p class="eyebrow bronze" data-en="Up close">Iš arčiau</p>
+          <h2 data-en="I give every property as much attention as if it were the only one">Kiekvienam objektui skiriu tiek dėmesio, tarsi jis būtų vienintelis</h2>
+          <p class="reel-lead" data-en="I don't hand your property to assistants: creating demand, viewings and negotiations stay in my hands. That, not the listing, is where the best price is made.">Jūsų turto neperduodu asistentams: paklausos sukūrimas, apžiūros ir derybos yra mano rankose. Būtent čia, o ne skelbime, gimsta geriausia kaina.</p>
+          <p class="reel-note" data-en="See what that looks like up close.">Pažiūrėkite, kaip tai atrodo iš arčiau.</p>
         </div>
         <!-- Reel: YouTube Short, loaded on click (facade). Change data-yt to swap the video. -->
         <div class="reel-video" data-yt="X-_gJaT-dTc" role="button" tabindex="0" data-reveal aria-label="Žiūrėti Kęstučio vaizdo įrašą">
           <img src="img/portrait-city.jpg" alt="Kęstutis Bružas dirba" loading="lazy" />
           <span class="reel-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span>
-          <span class="reel-tag">Žiūrėti, kaip dirbu</span>
+          <span class="reel-tag" data-en="Watch me at work">Žiūrėti, kaip dirbu</span>
         </div>
       </div>
     </section>
@@ -216,29 +220,29 @@
     <section class="voices" id="balsai">
       <div class="wrap">
         <div class="sec-head light">
-          <p class="eyebrow bronze" data-reveal>Klientų balsai</p>
-          <h2 data-reveal>Geriausiai apie mano darbą papasakos patys klientai</h2>
+          <p class="eyebrow bronze" data-reveal data-en="Client voices">Klientų balsai</p>
+          <h2 data-reveal data-en="My clients tell the story best">Geriausiai apie mano darbą papasakos patys klientai</h2>
         </div>
 
         <blockquote class="voice-feature" data-reveal>
-          <p>Nuoširdi rekomendacija. Sudėtingi ir galvos skausmą keliantys NT procesai profesionaliai paversti geriausiais rezultatais be rūpesčio.</p>
+          <p data-en="A heartfelt recommendation. Complex, headache-inducing real estate processes turned into the best results, professionally and without a worry.">Nuoširdi rekomendacija. Sudėtingi ir galvos skausmą keliantys NT procesai profesionaliai paversti geriausiais rezultatais be rūpesčio.</p>
           <footer><span class="vf-line"></span>Tomas Jacevičius</footer>
         </blockquote>
 
         <div class="voice-rail" id="rail">
           <figure class="vcard" data-reveal>
             <div class="vstars">★★★★★</div>
-            <p>Kęstučio gilus savo srities išmanymas, greita ir dalykiška komunikacija, mandagus, etiškas bendravimas, įsiklausymas į kliento lūkesčius, atsakingas požiūris į kiekvieną detalę lėmė, kad ir šį kartą buto pardavimo procesas buvo sklandus, greitas ir sėkmingas.</p>
+            <p data-en="Kęstutis's deep expertise, quick and businesslike communication, polite and ethical manner, genuine attention to the client's expectations and a responsible approach to every detail meant that, once again, selling the apartment was smooth, fast and successful.">Kęstučio gilus savo srities išmanymas, greita ir dalykiška komunikacija, mandagus, etiškas bendravimas, įsiklausymas į kliento lūkesčius, atsakingas požiūris į kiekvieną detalę lėmė, kad ir šį kartą buto pardavimo procesas buvo sklandus, greitas ir sėkmingas.</p>
             <figcaption><span class="vav" style="--c:#7c9c6b">R</span><b>Rūta Norkienė</b></figcaption>
           </figure>
           <figure class="vcard" data-reveal>
             <div class="vstars">★★★★★</div>
-            <p>Greita ir operatyvi komunikacija, orientacija į klientą ir geriausio įmanomo sandorio sudarymas parduodant mano močiutės butą. Dar ir super greitai. Patenkinta ir dėkinga už Kęstučio paslaugas. Jeigu ieškote, kaip parduoti nekilnojamą turtą be jokio vargo, labai rekomenduoju.</p>
+            <p data-en="Quick and responsive communication, a client-first approach and the best possible deal when selling my grandmother's apartment. And incredibly fast, too. Grateful and happy with Kęstutis's service. If you're looking to sell property without any hassle, I highly recommend him.">Greita ir operatyvi komunikacija, orientacija į klientą ir geriausio įmanomo sandorio sudarymas parduodant mano močiutės butą. Dar ir super greitai. Patenkinta ir dėkinga už Kęstučio paslaugas. Jeigu ieškote, kaip parduoti nekilnojamą turtą be jokio vargo, labai rekomenduoju.</p>
             <figcaption><span class="vav" style="--c:#a07391">K</span><b>Kotryna Kirliauskaitė</b></figcaption>
           </figure>
           <figure class="vcard" data-reveal>
             <div class="vstars">★★★★★</div>
-            <p>Geriausias NT ekspertas vidurio ir rytų Europoje! Padės parduoti ar nupirkti NT taip, kad liksite laimingas abiem atvejais. Rekomenduoju Kęstutį, su juo ramu, saugu ir malonu bendradarbiauti. Diamond! 💎</p>
+            <p data-en="The best real estate expert in Central and Eastern Europe! He'll help you sell or buy so you come out happy either way. I recommend Kęstutis, working with him is calm, safe and pleasant. Diamond! 💎">Geriausias NT ekspertas vidurio ir rytų Europoje! Padės parduoti ar nupirkti NT taip, kad liksite laimingas abiem atvejais. Rekomenduoju Kęstutį, su juo ramu, saugu ir malonu bendradarbiauti. Diamond! 💎</p>
             <figcaption><span class="vav" style="--c:#5f7da8">J</span><b>Juozas Piekuras</b></figcaption>
           </figure>
         </div>
@@ -246,9 +250,9 @@
         <div class="voices-foot" data-reveal>
           <div class="g-badge">
             <svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
-            <div><b class="g-stars">★★★★★</b><span>Google atsiliepimai</span></div>
+            <div><b class="g-stars">★★★★★</b><span data-en="Google reviews">Google atsiliepimai</span></div>
           </div>
-          <a class="vf-note" href="https://share.google/7SS8q7zgwa0Fj1GyD" target="_blank" rel="noopener">Skaityti Google atsiliepimus →</a>
+          <a class="vf-note" href="https://share.google/7SS8q7zgwa0Fj1GyD" target="_blank" rel="noopener" data-en="Read the Google reviews →">Skaityti Google atsiliepimus →</a>
         </div>
       </div>
     </section>
@@ -256,10 +260,10 @@
     <!-- ===== NUMBERS ===== -->
     <section class="numbers">
       <div class="wrap num-row">
-        <div class="num" data-reveal><b data-count="11">0</b><span>metų rinkoje</span></div>
-        <div class="num" data-reveal><b data-count="400" data-suffix="+">0</b><span>parduotų objektų</span></div>
-        <div class="num" data-reveal><b data-count="30" data-prefix="€" data-suffix=" mln.+">0</b><span>sandorių vertė</span></div>
-        <div class="num" data-reveal><b class="num-stars">★★★★★</b><span>Google atsiliepimai</span></div>
+        <div class="num" data-reveal><b data-count="11">0</b><span data-en="years in the market">metų rinkoje</span></div>
+        <div class="num" data-reveal><b data-count="400" data-suffix="+">0</b><span data-en="properties sold">parduotų objektų</span></div>
+        <div class="num" data-reveal><b data-count="30" data-prefix="€" data-suffix=" mln.+">0</b><span data-en="in transactions">sandorių vertė</span></div>
+        <div class="num" data-reveal><b class="num-stars">★★★★★</b><span data-en="Google reviews">Google atsiliepimai</span></div>
       </div>
     </section>
 
@@ -267,38 +271,38 @@
     <section class="eiga" id="eiga">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow" data-reveal>Kaip viskas vyksta</p>
-          <h2 data-reveal>Jums tereikia trijų žingsnių. Visa kita atlieku aš.</h2>
+          <p class="eyebrow" data-reveal data-en="How it works">Kaip viskas vyksta</p>
+          <h2 data-reveal data-en="You only take three steps. I handle the rest.">Jums tereikia trijų žingsnių. Visa kita atlieku aš.</h2>
         </div>
         <ol class="timeline">
           <li class="tl-step" data-reveal>
             <span class="tl-no">01</span>
             <div class="tl-body">
-              <h3>Pasikalbame</h3>
-              <p>Ramiai išsiaiškiname, ko jums iš tikrųjų reikia ir kokio rezultato siekiate. Pirmas pokalbis nemokamas ir be jokių įsipareigojimų.</p>
+              <h3 data-en="We talk">Pasikalbame</h3>
+              <p data-en="We calmly work out what you really need and the result you're after. The first conversation is free and with no obligation.">Ramiai išsiaiškiname, ko jums iš tikrųjų reikia ir kokio rezultato siekiate. Pirmas pokalbis nemokamas ir be jokių įsipareigojimų.</p>
             </div>
           </li>
           <li class="tl-step" data-reveal>
             <span class="tl-no">02</span>
             <div class="tl-body">
-              <h3>Perimu visą procesą</h3>
-              <p>Vertinimas, fotografija, rinkodara, apžiūros, derybos, dokumentai, notaras. Jūs visada žinote, kas vyksta, bet organizuoti nieko nereikia.</p>
+              <h3 data-en="I take over the whole process">Perimu visą procesą</h3>
+              <p data-en="Valuation, photography, marketing, viewings, negotiations, documents, notary. You always know what's happening, but you organize nothing.">Vertinimas, fotografija, rinkodara, apžiūros, derybos, dokumentai, notaras. Jūs visada žinote, kas vyksta, bet organizuoti nieko nereikia.</p>
               <ul class="tl-tags">
-                <li>Vertinimas</li>
-                <li>Fotografija</li>
-                <li>Rinkodara</li>
-                <li>Derybos</li>
-                <li>Dokumentai</li>
-                <li>Notaras</li>
-                <li>Teisė ir mokesčiai</li>
+                <li data-en="Valuation">Vertinimas</li>
+                <li data-en="Photography">Fotografija</li>
+                <li data-en="Marketing">Rinkodara</li>
+                <li data-en="Negotiations">Derybos</li>
+                <li data-en="Documents">Dokumentai</li>
+                <li data-en="Notary">Notaras</li>
+                <li data-en="Law &amp; taxes">Teisė ir mokesčiai</li>
               </ul>
             </div>
           </li>
           <li class="tl-step" data-reveal>
             <span class="tl-no">03</span>
             <div class="tl-body">
-              <h3>Gaunate rezultatą</h3>
-              <p>Teisinga kaina, tvarkingas sandoris ir ramybė. O dažniausiai ir žmogus, į kurį kreipsitės kitą kartą.</p>
+              <h3 data-en="You get the result">Gaunate rezultatą</h3>
+              <p data-en="The right price, a clean deal and peace of mind. And usually, the person you'll turn to next time.">Teisinga kaina, tvarkingas sandoris ir ramybė. O dažniausiai ir žmogus, į kurį kreipsitės kitą kartą.</p>
             </div>
           </li>
         </ol>
@@ -309,11 +313,11 @@
     <section class="valuation" id="vertinimas">
       <div class="wrap val-inner" data-reveal>
         <div class="val-text">
-          <p class="eyebrow bronze">Nemokama ir konfidencialu</p>
-          <h2>Sužinokite, kiek iš tikrųjų vertas jūsų turtas</h2>
-          <p class="val-sub">Pateiksiu realią rinkos vertę ir patarsiu, kaip gauti geriausią kainą. Be įsipareigojimų, atsakymas per 24 valandas.</p>
+          <p class="eyebrow bronze" data-en="Free and confidential">Nemokama ir konfidencialu</p>
+          <h2 data-en="Find out what your property is really worth">Sužinokite, kiek iš tikrųjų vertas jūsų turtas</h2>
+          <p class="val-sub" data-en="I'll give you a realistic market value and advise how to get the best price. No obligation, an answer within 24 hours.">Pateiksiu realią rinkos vertę ir patarsiu, kaip gauti geriausią kainą. Be įsipareigojimų, atsakymas per 24 valandas.</p>
         </div>
-        <a class="btn btn-clay val-btn" href="#kontaktai">Užsisakyti vertinimą</a>
+        <a class="btn btn-clay val-btn" href="#kontaktai" data-en="Request a valuation">Užsisakyti vertinimą</a>
       </div>
     </section>
 
@@ -321,11 +325,11 @@
     <section class="zmogus" id="zmogus">
       <div class="wrap zm-grid">
         <div class="zm-text">
-          <p class="eyebrow bronze" data-reveal>Žmogus už sandorio</p>
-          <h2 data-reveal>Ramybė, kurią jaučiate, ateina iš to, kaip gyvenu</h2>
-          <p class="zm-lead" data-reveal>Laisvu laiku manęs dažniausiai rasite kalnuose arba ant vandens: sklandymas, banglentės, sniegas. Ten, kur svarbiausia išlikti ramiam ir susikaupusiam, kad ir kas vyktų aplink.</p>
-          <p class="zm-lead" data-reveal>Būtent tai atsinešu į kiekvieną sandorį: šaltą galvą tada, kai aplink kyla įtampa, ir tikrą dėmesį žmogui, o ne tik kvadratiniams metrams.</p>
-          <div class="zm-quote" data-reveal>„Geriausi sprendimai gimsta ten, kur nėra panikos. Mano darbas ir yra užtikrinti, kad jos nebūtų.“</div>
+          <p class="eyebrow bronze" data-reveal data-en="The person behind the deal">Žmogus už sandorio</p>
+          <h2 data-reveal data-en="The calm you feel comes from how I live">Ramybė, kurią jaučiate, ateina iš to, kaip gyvenu</h2>
+          <p class="zm-lead" data-reveal data-en="In my free time you'll usually find me in the mountains or on the water: paragliding, surfing, snow. Where the thing that matters most is staying calm and focused, whatever happens around you.">Laisvu laiku manęs dažniausiai rasite kalnuose arba ant vandens: sklandymas, banglentės, sniegas. Ten, kur svarbiausia išlikti ramiam ir susikaupusiam, kad ir kas vyktų aplink.</p>
+          <p class="zm-lead" data-reveal data-en="That's exactly what I bring to every deal: a cool head when tension rises, and real attention to the person, not just the square meters.">Būtent tai atsinešu į kiekvieną sandorį: šaltą galvą tada, kai aplink kyla įtampa, ir tikrą dėmesį žmogui, o ne tik kvadratiniams metrams.</p>
+          <div class="zm-quote" data-reveal data-en="“The best decisions are made where there's no panic. My job is to make sure there isn't any.”">„Geriausi sprendimai gimsta ten, kur nėra panikos. Mano darbas ir yra užtikrinti, kad jos nebūtų.“</div>
         </div>
         <div class="zm-media" data-reveal>
           <figure class="zm-main">
@@ -345,27 +349,27 @@
     <section class="objects" id="objektai">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow" data-reveal>Portfelis</p>
-          <h2 data-reveal>Objektai, kuriuos man patikėjo savininkai</h2>
+          <p class="eyebrow" data-reveal data-en="Portfolio">Portfelis</p>
+          <h2 data-reveal data-en="Properties owners have trusted me with">Objektai, kuriuos man patikėjo savininkai</h2>
         </div>
         <div class="obj-grid">
           <a class="obj" href="https://www.capital.lt/lt/parduodamas-butas-bartu-g-16-burbiskese-vilniuje-5590-kvm-ploto-2-kambariai-p321238" target="_blank" rel="noopener" data-reveal>
-            <div class="obj-media"><span class="obj-badge">Parduodama</span><img src="img/obj-bartu.jpg" alt="Butas Bartų g., Vilnius" loading="lazy" /></div>
-            <div class="obj-info"><b>Butas · Bartų g., Vilnius</b><span>55,9 m² · 2 kambariai</span><strong class="obj-price">299 921 €</strong></div>
+            <div class="obj-media"><span class="obj-badge" data-en="For sale">Parduodama</span><img src="img/obj-bartu.jpg" alt="Butas Bartų g., Vilnius" loading="lazy" /></div>
+            <div class="obj-info"><b data-en="Apartment · Bartų st., Vilnius">Butas · Bartų g., Vilnius</b><span data-en="55.9 m² · 2 rooms">55,9 m² · 2 kambariai</span><strong class="obj-price">299 921 €</strong></div>
           </a>
           <a class="obj" href="https://www.capital.lt/lt/parduodamas-namas-visoriu-g-36e-visoriuose-vilniuje-19800-kvm-ploto-3-aukstai-p322156" target="_blank" rel="noopener" data-reveal>
-            <div class="obj-media"><span class="obj-badge">Parduodama</span><img src="img/obj-visoriu.jpg" alt="Namas Visorių g., Vilnius" loading="lazy" /></div>
-            <div class="obj-info"><b>Namas · Visorių g., Vilnius</b><span>198 m² · 5 kambariai</span><strong class="obj-price">449 964 €</strong></div>
+            <div class="obj-media"><span class="obj-badge" data-en="For sale">Parduodama</span><img src="img/obj-visoriu.jpg" alt="Namas Visorių g., Vilnius" loading="lazy" /></div>
+            <div class="obj-info"><b data-en="House · Visorių st., Vilnius">Namas · Visorių g., Vilnius</b><span data-en="198 m² · 5 rooms">198 m² · 5 kambariai</span><strong class="obj-price">449 964 €</strong></div>
           </a>
           <a class="obj sold" href="https://www.capital.lt/lt/parduodamas-butas-s-skapo-g-5a-senamiestyje-vilniuje-3771-kvm-ploto-1-kambariai-p305542" target="_blank" rel="noopener" data-reveal>
-            <div class="obj-media"><span class="obj-badge sold">Parduota</span><img src="img/obj-skapo.jpg" alt="Butas S. Skapo g., Senamiestis" loading="lazy" /></div>
-            <div class="obj-info"><b>Butas · S. Skapo g., Senamiestis</b><span>37,7 m² · 1 kambarys</span><strong class="obj-price">169 961 €</strong></div>
+            <div class="obj-media"><span class="obj-badge sold" data-en="Sold">Parduota</span><img src="img/obj-skapo.jpg" alt="Butas S. Skapo g., Senamiestis" loading="lazy" /></div>
+            <div class="obj-info"><b data-en="Apartment · S. Skapo st., Old Town">Butas · S. Skapo g., Senamiestis</b><span data-en="37.7 m² · 1 room">37,7 m² · 1 kambarys</span><strong class="obj-price">169 961 €</strong></div>
           </a>
         </div>
         <div class="obj-foot" data-reveal>
-          <p>Ieškote konkretaus objekto ar norite parduoti savąjį? Parašykite, ir pasiūlysiu tinkamiausius variantus, dažnai dar prieš jiems pasirodant skelbimų portaluose.</p>
-          <a class="btn btn-solid" href="#kontaktai">Susisiekti dėl objekto</a>
-          <a class="obj-ext" href="https://www.capital.lt/lt/kestutis-bruzas-b1954" target="_blank" rel="noopener">Visi mano objektai capital.lt →</a>
+          <p data-en="Looking for a particular property, or want to sell your own? Write to me and I'll suggest the best options, often before they reach the listing portals.">Ieškote konkretaus objekto ar norite parduoti savąjį? Parašykite, ir pasiūlysiu tinkamiausius variantus, dažnai dar prieš jiems pasirodant skelbimų portaluose.</p>
+          <a class="btn btn-solid" href="#kontaktai" data-en="Ask about a property">Susisiekti dėl objekto</a>
+          <a class="obj-ext" href="https://www.capital.lt/lt/kestutis-bruzas-b1954" target="_blank" rel="noopener" data-en="All my listings on capital.lt →">Visi mano objektai capital.lt →</a>
         </div>
       </div>
     </section>
@@ -374,16 +378,16 @@
     <section class="faq" id="duk">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow" data-reveal>Dažni klausimai</p>
-          <h2 data-reveal>Atsakymai, kol dar nepaskambinote</h2>
+          <p class="eyebrow" data-reveal data-en="Common questions">Dažni klausimai</p>
+          <h2 data-reveal data-en="Answers before you even call">Atsakymai, kol dar nepaskambinote</h2>
         </div>
         <div class="faq-list">
-          <details class="faq-item" data-reveal><summary>Koks komisinis ir ar yra paslėptų mokesčių?<span class="faq-ico"></span></summary><div class="faq-a">Komisinį sutariame iš anksto ir aiškiai, jokių paslėptų mokesčių. Mokate tik už rezultatą, kai turtas parduodamas.</div></details>
-          <details class="faq-item" data-reveal><summary>Per kiek laiko parduodamas turtas?<span class="faq-ico"></span></summary><div class="faq-a">Priklauso nuo segmento ir kainos. Tinkamai paruoštas ir teisingai įkainotas objektas pirkėją randa greičiau. Realų terminą pasakysiu jau po pirmo įvertinimo.</div></details>
-          <details class="faq-item" data-reveal><summary>Ar galima parduoti diskretiškai, be skelbimų portaluose?<span class="faq-ico"></span></summary><div class="faq-a">Taip. Prireikus parduodu tyliai, per savo pirkėjų ratą, neskelbdamas objekto portaluose ir saugodamas jūsų aplinkybes.</div></details>
-          <details class="faq-item" data-reveal><summary>Gyvenu užsienyje. Ar galite viską sutvarkyti nuotoliu?<span class="faq-ico"></span></summary><div class="faq-a">Taip, daugelis mano klientų gyvena svetur. Perduodate raktus, o vertinimą, peržiūras, derybas ir dokumentus tvarkau aš.</div></details>
-          <details class="faq-item" data-reveal><summary>Kuo skiriatės nuo įprasto brokerio?<span class="faq-ico"></span></summary><div class="faq-a">Visą procesą vedu asmeniškai, nuo pirmo pokalbio iki notaro. Aukščiausio lygio pristatymas, tikri pirkėjai ir derybos, apginančios jūsų kainą.</div></details>
-          <details class="faq-item" data-reveal><summary>Ar pirma konsultacija nemokama?<span class="faq-ico"></span></summary><div class="faq-a">Taip. Pirmas pokalbis ir turto vertinimas nemokami ir be jokių įsipareigojimų.</div></details>
+          <details class="faq-item" data-reveal><summary><span data-en="What's the commission, and are there hidden fees?">Koks komisinis ir ar yra paslėptų mokesčių?</span><span class="faq-ico"></span></summary><div class="faq-a" data-en="We agree the commission upfront and clearly, with no hidden fees. You only pay for the result, once the property is sold.">Komisinį sutariame iš anksto ir aiškiai, jokių paslėptų mokesčių. Mokate tik už rezultatą, kai turtas parduodamas.</div></details>
+          <details class="faq-item" data-reveal><summary><span data-en="How long does it take to sell?">Per kiek laiko parduodamas turtas?</span><span class="faq-ico"></span></summary><div class="faq-a" data-en="It depends on the segment and the price. A well-prepared, correctly priced property finds its buyer faster. I'll give you a realistic timeframe after the first valuation.">Priklauso nuo segmento ir kainos. Tinkamai paruoštas ir teisingai įkainotas objektas pirkėją randa greičiau. Realų terminą pasakysiu jau po pirmo įvertinimo.</div></details>
+          <details class="faq-item" data-reveal><summary><span data-en="Can you sell discreetly, without the listing portals?">Ar galima parduoti diskretiškai, be skelbimų portaluose?</span><span class="faq-ico"></span></summary><div class="faq-a" data-en="Yes. When needed I sell quietly, through my circle of buyers, without listing the property on the portals and keeping your circumstances private.">Taip. Prireikus parduodu tyliai, per savo pirkėjų ratą, neskelbdamas objekto portaluose ir saugodamas jūsų aplinkybes.</div></details>
+          <details class="faq-item" data-reveal><summary><span data-en="I live abroad. Can you handle everything remotely?">Gyvenu užsienyje. Ar galite viską sutvarkyti nuotoliu?</span><span class="faq-ico"></span></summary><div class="faq-a" data-en="Yes, many of my clients live abroad. You hand over the keys, and I take care of the valuation, viewings, negotiations and documents.">Taip, daugelis mano klientų gyvena svetur. Perduodate raktus, o vertinimą, peržiūras, derybas ir dokumentus tvarkau aš.</div></details>
+          <details class="faq-item" data-reveal><summary><span data-en="How are you different from an ordinary agent?">Kuo skiriatės nuo įprasto brokerio?</span><span class="faq-ico"></span></summary><div class="faq-a" data-en="I lead the whole process personally, from the first conversation to the notary. Top-tier presentation, real buyers and negotiations that defend your price.">Visą procesą vedu asmeniškai, nuo pirmo pokalbio iki notaro. Aukščiausio lygio pristatymas, tikri pirkėjai ir derybos, apginančios jūsų kainą.</div></details>
+          <details class="faq-item" data-reveal><summary><span data-en="Is the first consultation free?">Ar pirma konsultacija nemokama?</span><span class="faq-ico"></span></summary><div class="faq-a" data-en="Yes. The first conversation and property valuation are free and with no obligation.">Taip. Pirmas pokalbis ir turto vertinimas nemokami ir be jokių įsipareigojimų.</div></details>
         </div>
       </div>
     </section>
@@ -394,15 +398,15 @@
         <div class="contact-copy">
           <div class="contact-person" data-reveal>
             <img src="img/kestutis.jpg" alt="Kęstutis Bružas" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbportrait/240/240'" />
-            <div><span class="eyebrow bronze">Pasikalbėkime</span><h2>Pradėkime nuo paprasto pokalbio</h2></div>
+            <div><span class="eyebrow bronze" data-en="Let's talk">Pasikalbėkime</span><h2 data-en="Let's start with a simple conversation">Pradėkime nuo paprasto pokalbio</h2></div>
           </div>
-          <p class="contact-lead" data-reveal>Parašykite arba paskambinkite. Atsakysiu asmeniškai, dažniausiai per 15 minučių. Be spaudimo ir be jokių įsipareigojimų.</p>
+          <p class="contact-lead" data-reveal data-en="Write or call. I'll reply personally, usually within 15 minutes. No pressure and no obligation.">Parašykite arba paskambinkite. Atsakysiu asmeniškai, dažniausiai per 15 minučių. Be spaudimo ir be jokių įsipareigojimų.</p>
           <div class="contact-details" data-reveal>
-            <a href="tel:+37060141131"><span>Telefonas</span>+370 601 41131</a>
-            <a href="mailto:kestutis.bruzas@capitalrealty.com"><span>El. paštas</span>kestutis.bruzas@capitalrealty.com</a>
+            <a href="tel:+37060141131"><span data-en="Phone">Telefonas</span>+370 601 41131</a>
+            <a href="mailto:kestutis.bruzas@capitalrealty.com"><span data-en="Email">El. paštas</span>kestutis.bruzas@capitalrealty.com</a>
           </div>
           <a class="wa-inline" href="https://m.me/kestutisbruzasNT" target="_blank" rel="noopener" data-reveal>
-            <span class="wa-dot"></span>Parašyti per Messenger
+            <span class="wa-dot"></span><span data-en="Message on Messenger">Parašyti per Messenger</span>
           </a>
           <div class="contact-social" data-reveal>
             <a href="https://www.linkedin.com/in/vilniusbrokeris" target="_blank" rel="noopener">LinkedIn</a>
@@ -411,15 +415,15 @@
           </div>
         </div>
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST" data-reveal>
-          <div class="field"><label>Vardas</label><input name="vardas" required placeholder="Jūsų vardas" /></div>
-          <div class="field"><label>Telefonas</label><input name="telefonas" type="tel" required placeholder="+370" /></div>
-          <div class="field"><label>Kuo galiu padėti?</label>
-            <select name="tema"><option>Noriu parduoti</option><option>Noriu pirkti</option><option>Investavimas</option><option>Gyvenu užsienyje, reikia viską sutvarkyti</option><option>Konsultacija</option><option>Turto vertinimas</option></select>
+          <div class="field"><label data-en="Name">Vardas</label><input name="vardas" required placeholder="Jūsų vardas" data-en-ph="Your name" /></div>
+          <div class="field"><label data-en="Phone">Telefonas</label><input name="telefonas" type="tel" required placeholder="+370" data-en-ph="+370" /></div>
+          <div class="field"><label data-en="How can I help?">Kuo galiu padėti?</label>
+            <select name="tema"><option data-en="I want to sell">Noriu parduoti</option><option data-en="I want to buy">Noriu pirkti</option><option data-en="Investing">Investavimas</option><option data-en="I live abroad and need everything handled">Gyvenu užsienyje, reikia viską sutvarkyti</option><option data-en="Consultation">Konsultacija</option><option data-en="Property valuation">Turto vertinimas</option></select>
           </div>
-          <div class="field"><label>Žinutė</label><textarea name="žinutė" rows="2" placeholder="Trumpai apie jūsų situaciją"></textarea></div>
-          <button class="btn btn-clay btn-block" type="submit">Parašyti Kęstučiui</button>
-          <p class="form-note">Konfidencialu · Be įsipareigojimų · Atsakau asmeniškai, dažniausiai per 15 min.</p>
-          <p class="form-success" id="form-success" hidden>Ačiū. Susisieksiu su jumis asmeniškai.</p>
+          <div class="field"><label data-en="Message">Žinutė</label><textarea name="žinutė" rows="2" placeholder="Trumpai apie jūsų situaciją" data-en-ph="Briefly about your situation"></textarea></div>
+          <button class="btn btn-clay btn-block" type="submit" data-en="Message Kęstutis">Parašyti Kęstučiui</button>
+          <p class="form-note" data-en="Confidential · No obligation · I reply personally, usually within 15 min.">Konfidencialu · Be įsipareigojimų · Atsakau asmeniškai, dažniausiai per 15 min.</p>
+          <p class="form-success" id="form-success" hidden data-en="Thank you. I'll be in touch personally.">Ačiū. Susisieksiu su jumis asmeniškai.</p>
         </form>
       </div>
     </section>
@@ -428,7 +432,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span class="footer-name">Kęstutis Bružas</span>
-      <span class="footer-mid"><a href="patarimai.html">Patarimai</a> · Nekilnojamojo turto patarėjas · Vilnius · ★★★★★ Google</span>
+      <span class="footer-mid"><a href="patarimai.html" data-en="Guides">Patarimai</a> · <span data-en="Real estate advisor · Vilnius">Nekilnojamojo turto patarėjas · Vilnius</span> · ★★★★★ Google</span>
       <span class="footer-r">© 2026 · Capital Realty</span>
     </div>
   </footer>
@@ -438,9 +442,9 @@
     <img class="sc-photo" src="img/kestutis.jpg" alt="Kęstutis Bružas" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kbportrait/120/120'" />
     <div class="sc-text">
       <b>Kęstutis Bružas</b>
-      <span>Atsakau per ~15 min.</span>
+      <span data-en="I reply in ~15 min.">Atsakau per ~15 min.</span>
     </div>
-    <a class="sc-btn" href="https://m.me/kestutisbruzasNT" target="_blank" rel="noopener">Parašyti žinutę</a>
+    <a class="sc-btn" href="https://m.me/kestutisbruzasNT" target="_blank" rel="noopener" data-en="Message me">Parašyti žinutę</a>
   </div>
   <!-- desktop floating Messenger -->
   <a class="wa-float" href="https://m.me/kestutisbruzasNT" target="_blank" rel="noopener" aria-label="Rašyti per Messenger">
@@ -458,6 +462,41 @@
     document.getElementById('navLinks').addEventListener('click', (e) => {
       if (e.target.tagName === 'A') nav.classList.remove('open');
     });
+
+    // ===== i18n: LT default, EN via data-en swap =====
+    const I18N_META = {
+      lt: {
+        title: 'Kęstutis Bružas · Asmeninis nekilnojamojo turto patarėjas Vilniuje',
+        desc: 'Kęstutis Bružas, asmeninis nekilnojamojo turto patarėjas Vilniuje. Perduodate raktus, viskuo pasirūpina jis. Asmeniškas aptarnavimas parduodant ir perkant. Google įvertinimas 5/5.',
+        btn: 'EN', btnAria: 'Switch to English'
+      },
+      en: {
+        title: 'Kęstutis Bružas · Private Real Estate Advisor in Vilnius',
+        desc: 'Kęstutis Bružas, a personal real estate advisor in Vilnius. Hand over the keys and he handles everything. Personal service for selling and buying. Rated 5/5 on Google.',
+        btn: 'LT', btnAria: 'Perjungti į lietuvių kalbą'
+      }
+    };
+    const langBtn = document.getElementById('langBtn');
+    const i18nEls = Array.from(document.querySelectorAll('[data-en]'));
+    i18nEls.forEach(el => { el.dataset.lt = el.innerHTML; });
+    const i18nPh = Array.from(document.querySelectorAll('[data-en-ph]'));
+    i18nPh.forEach(el => { el.dataset.ltPh = el.getAttribute('placeholder') || ''; });
+    let curLang = 'lt';
+    function applyLang(lang) {
+      curLang = lang === 'en' ? 'en' : 'lt';
+      i18nEls.forEach(el => { el.innerHTML = curLang === 'en' ? el.getAttribute('data-en') : el.dataset.lt; });
+      i18nPh.forEach(el => { el.setAttribute('placeholder', curLang === 'en' ? el.getAttribute('data-en-ph') : el.dataset.ltPh); });
+      const m = I18N_META[curLang];
+      document.documentElement.lang = curLang;
+      document.title = m.title;
+      const d = document.querySelector('meta[name="description"]'); if (d) d.setAttribute('content', m.desc);
+      if (langBtn) { langBtn.textContent = m.btn; langBtn.setAttribute('aria-label', m.btnAria); }
+      try { localStorage.setItem('bruzas-lang', curLang); } catch (e) {}
+    }
+    let savedLang = null;
+    try { savedLang = localStorage.getItem('bruzas-lang'); } catch (e) {}
+    applyLang(savedLang === 'en' ? 'en' : 'lt');
+    if (langBtn) langBtn.addEventListener('click', () => applyLang(curLang === 'en' ? 'lt' : 'en'));
 
     // reel: load YouTube Short on click (facade)
     (() => {
@@ -523,11 +562,12 @@
 
     const cf = document.getElementById('contact-form');
     const showThanks = () => {
+      const en = curLang === 'en';
       cf.innerHTML = '<div class="form-thanks">' +
         '<span class="ft-check">&#10003;</span>' +
-        '<h3>Ačiū, gavau jūsų žinutę.</h3>' +
-        '<p>Susisieksiu su jumis asmeniškai, dažniausiai per 15 minučių.</p>' +
-        '<a class="ft-wa" href="https://m.me/kestutisbruzasNT" target="_blank" rel="noopener">Arba parašykite iš karto per Messenger</a>' +
+        '<h3>' + (en ? 'Thank you, I received your message.' : 'Ačiū, gavau jūsų žinutę.') + '</h3>' +
+        '<p>' + (en ? "I'll be in touch personally, usually within 15 minutes." : 'Susisieksiu su jumis asmeniškai, dažniausiai per 15 minučių.') + '</p>' +
+        '<a class="ft-wa" href="https://m.me/kestutisbruzasNT" target="_blank" rel="noopener">' + (en ? 'Or message me right away on Messenger' : 'Arba parašykite iš karto per Messenger') + '</a>' +
       '</div>';
     };
     cf.addEventListener('submit', async (e) => {
@@ -536,7 +576,7 @@
       const btn = cf.querySelector('button[type=submit]');
       if (action && !action.includes('YOUR_ID')) {
         try {
-          if (btn) { btn.disabled = true; btn.textContent = 'Siunčiama...'; }
+          if (btn) { btn.disabled = true; btn.textContent = curLang === 'en' ? 'Sending...' : 'Siunčiama...'; }
           await fetch(action, { method: 'POST', body: new FormData(cf), headers: { Accept: 'application/json' } });
         } catch (err) { /* show thanks anyway */ }
       }
