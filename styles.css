@@ -337,8 +337,9 @@ em { font-style: italic; color: var(--emerald); font-weight: 500; }
 .val-btn { flex-shrink: 0; }
 
 /* ===== REEL / PERSONAL ATTENTION ===== */
-.reel-sec { padding: var(--pad) 0; background: var(--ink); color: var(--paper); overflow: hidden; }
-.reel-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px, 5.5vw, 84px); align-items: center; }
+.reel-sec { padding: var(--pad) 0; background: var(--emerald); color: var(--paper); overflow: hidden; position: relative; }
+.reel-sec::before { content: ""; position: absolute; inset: 0; background: radial-gradient(100% 80% at 14% 0%, rgba(var(--glow-rgb),.4), transparent 60%); pointer-events: none; }
+.reel-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px, 5.5vw, 84px); align-items: center; }
 .reel-text .eyebrow { color: var(--bronze-soft); }
 .reel-text .eyebrow::before { background: var(--bronze); }
 .reel-text h2 { color: var(--paper); margin-bottom: 22px; line-height: 1.08; }
