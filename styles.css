@@ -64,7 +64,7 @@ em { font-style: italic; color: var(--emerald); font-weight: 500; }
 .wordmark .wm-nt { color: var(--bronze-soft); font-weight: 600; font-style: normal; }
 .nav.scrolled .wordmark .wm-nt { color: var(--bronze); }
 .wordmark span { display: block; font-family: var(--fb); font-size: 9.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--bronze-soft); margin-top: 6px; }
-.nav-links { display: flex; gap: 30px; font-size: 13.5px; font-weight: 500; }
+.nav-links { display: flex; gap: 30px; font-size: 13.5px; font-weight: 500; margin-right: auto; margin-left: clamp(28px, 4vw, 60px); }
 .nav-links a { color: rgba(242,238,227,.78); position: relative; transition: color .25s; }
 .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -5px; width: 0; height: 1px; background: var(--bronze-soft); transition: width .3s var(--ease); }
 .nav-links a:hover { color: var(--paper); }
@@ -297,7 +297,9 @@ em { font-style: italic; color: var(--emerald); font-weight: 500; }
   .tl-no { width: 54px; height: 54px; font-size: 21px; }
   .tl-step::before { left: 27px; top: 50px; }
   .voices-foot { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .nav-inner { padding: 18px 20px; }
+  .nav-inner { padding: 18px 18px; gap: 12px; }
+  .wordmark span { display: none; }
+  .nav-cta-d { padding: 9px 13px; }
   .footer-inner { flex-direction: column; text-align: center; }
 
   /* --- mobile flow: tighter vertical rhythm --- */
@@ -448,11 +450,16 @@ a.vf-note:hover { color: var(--bronze-soft); }
 .nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav-cta-m { display: none; }
 
-/* language toggle */
-.lang-btn { flex-shrink: 0; font-family: var(--fb); font-size: 12px; font-weight: 700; letter-spacing: .08em; line-height: 1; color: rgba(242,238,227,.82); background: transparent; border: 1px solid var(--line-d); border-radius: 999px; padding: 8px 13px; cursor: pointer; transition: color .25s, border-color .25s, background .25s; }
-.lang-btn:hover { color: var(--paper); border-color: var(--bronze-soft); }
-.nav.scrolled .lang-btn { color: var(--tx); border-color: rgba(0,0,0,.16); }
-.nav.scrolled .lang-btn:hover { color: var(--ink); border-color: var(--ink); }
+/* language pill (both options visible) */
+.lang-pill { display: inline-flex; align-items: center; flex-shrink: 0; gap: 2px; padding: 3px; border: 1px solid var(--line-d); border-radius: 999px; }
+.lang-opt { font-family: var(--fb); font-size: 11.5px; font-weight: 700; letter-spacing: .06em; line-height: 1; color: rgba(242,238,227,.6); background: transparent; border: 0; border-radius: 999px; padding: 6px 11px; cursor: pointer; transition: color .2s, background .2s; }
+.lang-opt:hover { color: var(--paper); }
+.lang-opt.is-on { background: var(--paper); color: var(--emerald); }
+.nav.scrolled .lang-pill { border-color: rgba(0,0,0,.16); }
+.nav.scrolled .lang-opt { color: var(--tx); }
+.nav.scrolled .lang-opt:hover { color: var(--ink); }
+.nav.scrolled .lang-opt.is-on { background: var(--emerald); color: var(--paper); }
+.lang-menu, .lang-foot { display: none; }
 
 /* ===== THANK YOU panel ===== */
 .form-thanks { text-align: center; padding: 20px 6px 10px; }
@@ -464,15 +471,22 @@ a.vf-note:hover { color: var(--bronze-soft); }
 
 @media (max-width: 1000px) {
   .nav-toggle { display: flex; }
-  .nav-cta-d { display: none; }
-  /* keep the language toggle beside the hamburger, above the overlay */
-  .lang-btn { position: relative; z-index: 3; margin-left: auto; margin-right: 4px; }
-  .nav.open .lang-btn, .nav.open.scrolled .lang-btn { color: var(--paper); border-color: rgba(242,238,227,.32); }
+  /* header CTA now visible on mobile too, grouped with the hamburger */
+  .nav-cta-d { display: inline-flex; margin-left: auto; padding: 10px 15px; font-size: 12px; letter-spacing: .03em; }
+  /* language pill moves out of the header into the menu + footer on mobile */
+  .lang-header { display: none; }
+  .lang-menu { display: inline-flex; align-self: flex-start; margin-top: 28px; }
+  .lang-foot { display: inline-flex; align-self: center; margin-top: 8px; }
+  .nav.open .lang-menu, .nav.open.scrolled .lang-menu { border-color: rgba(242,238,227,.3); }
+  .nav.open .lang-menu .lang-opt, .nav.open.scrolled .lang-menu .lang-opt { color: rgba(242,238,227,.62); }
+  .nav.open .lang-menu .lang-opt:hover { color: var(--paper); }
+  .nav.open .lang-menu .lang-opt.is-on, .nav.open.scrolled .lang-menu .lang-opt.is-on { background: var(--paper); color: var(--emerald); }
   /* when open, drop the scrolled backdrop-filter so the fixed overlay can fill the viewport */
   .nav.open { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: none; }
   /* full-screen solid overlay menu */
   .nav-links {
     display: flex; flex-direction: column; justify-content: center; gap: 0;
+    margin: 0;
     position: fixed; inset: 0;
     background: var(--emerald);
     padding: 104px 34px 48px;

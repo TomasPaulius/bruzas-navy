@@ -105,8 +105,15 @@
         <a href="#objektai" data-en="Properties">Objektai</a>
         <a href="patarimai.html" data-en="Guides">Patarimai</a>
         <a class="nav-cta-m" href="#kontaktai" data-en="Let's talk">Pasikalbėkime</a>
+        <div class="lang-pill lang-menu" role="group" aria-label="Kalba / Language">
+          <button type="button" class="lang-opt" data-lang="lt">LT</button>
+          <button type="button" class="lang-opt" data-lang="en">EN</button>
+        </div>
       </nav>
-      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch to English">EN</button>
+      <div class="lang-pill lang-header" role="group" aria-label="Kalba / Language">
+        <button type="button" class="lang-opt" data-lang="lt">LT</button>
+        <button type="button" class="lang-opt" data-lang="en">EN</button>
+      </div>
       <a class="btn btn-line nav-cta-d" href="#kontaktai" data-en="Let's talk">Pasikalbėkime</a>
       <button class="nav-toggle" id="navToggle" aria-label="Meniu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -433,6 +440,10 @@
       <span class="footer-name">Kęstutis Bružas</span>
       <span class="footer-mid"><a href="patarimai.html" data-en="Guides">Patarimai</a> · <span data-en="Real estate advisor · Vilnius">Nekilnojamojo turto patarėjas · Vilnius</span> · ★★★★★ Google</span>
       <span class="footer-r">© 2026 · Capital Realty</span>
+      <div class="lang-pill lang-foot" role="group" aria-label="Kalba / Language">
+        <button type="button" class="lang-opt" data-lang="lt">LT</button>
+        <button type="button" class="lang-opt" data-lang="en">EN</button>
+      </div>
     </div>
   </footer>
 
@@ -475,7 +486,7 @@
         btn: 'LT', btnAria: 'Perjungti į lietuvių kalbą'
       }
     };
-    const langBtn = document.getElementById('langBtn');
+    const langOpts = Array.from(document.querySelectorAll('.lang-opt'));
     const i18nEls = Array.from(document.querySelectorAll('[data-en]'));
     i18nEls.forEach(el => { el.dataset.lt = el.innerHTML; });
     const i18nPh = Array.from(document.querySelectorAll('[data-en-ph]'));
@@ -489,13 +500,13 @@
       document.documentElement.lang = curLang;
       document.title = m.title;
       const d = document.querySelector('meta[name="description"]'); if (d) d.setAttribute('content', m.desc);
-      if (langBtn) { langBtn.textContent = m.btn; langBtn.setAttribute('aria-label', m.btnAria); }
+      langOpts.forEach(b => { const on = b.dataset.lang === curLang; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
       try { localStorage.setItem('bruzas-lang', curLang); } catch (e) {}
     }
     let savedLang = null;
     try { savedLang = localStorage.getItem('bruzas-lang'); } catch (e) {}
     applyLang(savedLang === 'en' ? 'en' : 'lt');
-    if (langBtn) langBtn.addEventListener('click', () => applyLang(curLang === 'en' ? 'lt' : 'en'));
+    langOpts.forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
 
     // reel: load YouTube Short on click (facade)
     (() => {
