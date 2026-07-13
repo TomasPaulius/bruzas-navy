@@ -39,7 +39,7 @@
     "mainEntity": [
       { "@type": "Question", "name": "Kaip sužinoti buto vertę Vilniuje?", "acceptedAnswer": { "@type": "Answer", "text": "Tiksliausią vertę parodo ne skaičiuoklė, o realūs pastarojo meto sandoriai su panašiais butais toje pačioje vietoje. Vertinu jūsų buto vietą, būklę, plotą, aukštą ir statybos metus bei palyginu su tuo, už kiek iš tikrųjų parduoti gretimi objektai." } },
       { "@type": "Question", "name": "Ar turto vertinimas nemokamas?", "acceptedAnswer": { "@type": "Answer", "text": "Taip, realios rinkos kainos įvertinimą atlieku nemokamai. Apžiūriu jūsų butą ir pateikiu aiškų vaizdą, kiek jis realiai vertas šiandien Vilniuje." } },
-      { "@type": "Question", "name": "Kodėl internetinės skaičiuoklės rodo skirtingą kainą?", "acceptedAnswer": { "@type": "Answer", "text": "Skaičiuoklės remiasi vidurkiais ir skelbiamomis kainomis, o ne realiais sandoriais, ir nemato jūsų buto būklės, vaizdo, aukšto ar planuotės. Todėl skirtingos skaičiuoklės tam pačiam butui rodo skirtingus skaičius, kurie dažnai neatspindi tikrosios rinkos kainos." } }
+      { "@type": "Question", "name": "Kodėl internetinės skaičiuoklės rodo skirtingą kainą?", "acceptedAnswer": { "@type": "Answer", "text": "Skaičiuoklės remiasi vidurkiais ir skelbiamomis kainomis, o ne realiais sandoriais, ir nemato jūsų buto būklės, vaizdo, aukšto ar suplanavimo. Todėl skirtingos skaičiuoklės tam pačiam butui rodo skirtingus skaičius, kurie dažnai neatspindi tikrosios rinkos kainos." } }
     ]
   }
   </script>
@@ -47,15 +47,25 @@
 <body>
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="wordmark" href="index.html">Bružas <b class="wm-nt">NT</b><span>Nekilnojamasis turtas · Vilnius</span></a>
+      <a class="wordmark" href="index.html">Bružas <b class="wm-nt">NT</b><span data-en="Real estate · Vilnius">Nekilnojamasis turtas · Vilnius</span></a>
       <nav class="nav-links" id="navLinks">
-        <a href="index.html#kodel">Kodėl jis</a>
-        <a href="index.html#balsai">Klientų balsai</a>
-        <a href="patarimai.html">Patarimai</a>
-        <a href="index.html#objektai">Objektai</a>
-        <a class="nav-cta-m" href="index.html#kontaktai">Pasikalbėkime</a>
+        <a href="index.html#kodel" data-en="Why him">Kodėl jis</a>
+        <a href="index.html#balsai" data-en="Reviews">Klientų balsai</a>
+        <a href="index.html#eiga" data-en="Process">Eiga</a>
+        <a href="index.html#zmogus" data-en="About">Apie</a>
+        <a href="index.html#objektai" data-en="Properties">Objektai</a>
+        <a href="patarimai.html" data-en="Guides">Patarimai</a>
+        <a class="nav-cta-m" href="index.html#kontaktai" data-en="Let's talk">Pasikalbėkime</a>
+        <div class="lang-pill lang-menu" role="group" aria-label="Kalba / Language">
+          <button type="button" class="lang-opt" data-lang="lt">LT</button>
+          <button type="button" class="lang-opt" data-lang="en">EN</button>
+        </div>
       </nav>
-      <a class="btn btn-line nav-cta-d" href="index.html#kontaktai">Pasikalbėkime</a>
+      <div class="lang-pill lang-header" role="group" aria-label="Kalba / Language">
+        <button type="button" class="lang-opt" data-lang="lt">LT</button>
+        <button type="button" class="lang-opt" data-lang="en">EN</button>
+      </div>
+      <a class="btn btn-line nav-cta-d" href="index.html#kontaktai" data-en="Let's talk">Pasikalbėkime</a>
       <button class="nav-toggle" id="navToggle" aria-label="Meniu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -64,52 +74,52 @@
     <article>
       <header class="article-head">
         <div class="wrap">
-          <p class="crumb"><a href="patarimai.html">Patarimai</a> · Vertinimas</p>
-          <h1>Kiek iš tikrųjų vertas jūsų butas</h1>
-          <div class="article-meta"><span>Autorius <b>Kęstutis Bružas</b></span><span>5 min skaitymo</span></div>
+          <p class="crumb" data-en="<a href='patarimai.html'>Guides</a> · Valuation"><a href="patarimai.html">Patarimai</a> · Vertinimas</p>
+          <h1 data-en="What your apartment is really worth">Kiek iš tikrųjų vertas jūsų butas</h1>
+          <div class="article-meta"><span data-en="Author <b>Kęstutis Bružas</b>">Autorius <b>Kęstutis Bružas</b></span><span data-en="5 min read">5 min skaitymo</span></div>
         </div>
       </header>
 
       <div class="article-wrap">
         <div class="article-body">
-          <p class="lead">Trumpai: buto vertė Vilniuje priklauso nuo kelių dalykų kartu: vietos, būklės, ploto, aukšto ir statybos metų, o galutinę NT kainą lemia realūs pastarojo meto rinkos sandoriai su panašiais butais. Jokia internetinė skaičiuoklė viso to nemato, todėl tiksliausiai atsakyti į klausimą „kiek vertas mano butas“ galima tik apžiūrėjus objektą vietoje. Tokį realų vertinimą atlieku nemokamai.</p>
+          <p class="lead" data-en="In short: the value of an apartment in Vilnius comes down to several factors working together, location, condition, floor area, storey and year of construction, while the final price is set by recent, real market transactions involving similar apartments. No online calculator can see all of this, which is why the only accurate way to answer the question ‘what is my apartment worth’ is to assess the property in person. I carry out that real-world valuation free of charge.">Trumpai: buto vertė Vilniuje priklauso nuo kelių dalykų kartu: vietos, būklės, ploto, aukšto ir statybos metų, o galutinę NT kainą lemia realūs pastarojo meto rinkos sandoriai su panašiais butais. Jokia internetinė skaičiuoklė viso to nemato, todėl tiksliausiai atsakyti į klausimą „kiek vertas mano butas“ galima tik apžiūrėjus objektą vietoje. Tokį realų vertinimą atlieku nemokamai.</p>
 
-          <h2>Kas lemia buto kainą</h2>
-          <p>Buto vertės nustatymas nėra viena skaičiavimo formulė. Tai kelių veiksnių derinys, kuriame vienas veiksnys vertės prideda, o kitas ją sumažina. Per 11 metų darbo Vilniaus rinkoje įsitikinau, kad to paties ploto butus galima parduoti visiškai skirtingomis kainomis, priklausomai nuo detalių.</p>
+          <h2 data-en="What determines an apartment's price">Kas lemia buto kainą</h2>
+          <p data-en="Valuing an apartment is not a single formula. It is a combination of factors, where one adds value and another takes it away. Over 11 years in the Vilnius market I have seen apartments of identical size sell at completely different prices, and the difference always comes down to the details.">Buto vertės nustatymas nėra viena skaičiavimo formulė. Tai kelių veiksnių derinys, kuriame vienas veiksnys vertės prideda, o kitas ją sumažina. Per 11 metų darbo Vilniaus rinkoje įsitikinau, kad to paties ploto butus galima parduoti visiškai skirtingomis kainomis, priklausomai nuo detalių.</p>
           <ul>
-            <li><strong>Vieta ir mikrorajonas</strong>: infrastruktūra, susisiekimas ir kaimynystė</li>
-            <li><strong>Plotas ir planuotė</strong>: kiek erdvė funkcionali, o ne vien kvadratiniai metrai</li>
-            <li><strong>Būklė ir apdaila</strong>: ar reikės investuoti prieš įsikeliant</li>
-            <li><strong>Aukštas ir vaizdas</strong>: jie kainą dažnai pakeičia labiau, nei atrodo</li>
-            <li><strong>Statybos metai ir namo tipas</strong>: energetinė klasė ir bendra namo būklė</li>
-            <li><strong>Realūs rinkos sandoriai</strong>: už kiek iš tikrųjų parduoti panašūs butai šalia</li>
+            <li data-en="<strong>Location and neighbourhood</strong>: infrastructure, transport links and who lives next door"><strong>Vieta ir mikrorajonas</strong>: infrastruktūra, susisiekimas ir kaimynystė</li>
+            <li data-en="<strong>Floor area and layout</strong>: how functional the space is, not just the square metres"><strong>Plotas ir suplanavimas</strong>: kiek erdvė funkcionali, o ne vien kvadratiniai metrai</li>
+            <li data-en="<strong>Condition and finish</strong>: whether a buyer will need to invest before moving in"><strong>Būklė ir apdaila</strong>: ar reikės investuoti prieš įsikeliant</li>
+            <li data-en="<strong>Storey and view</strong>: they shift the price more than most people expect"><strong>Aukštas ir vaizdas</strong>: jie kainą dažnai pakeičia labiau, nei atrodo</li>
+            <li data-en="<strong>Year of construction and building type</strong>: energy rating and the overall condition of the building"><strong>Statybos metai ir namo tipas</strong>: energetinė klasė ir bendra namo būklė</li>
+            <li data-en="<strong>Real market transactions</strong>: what similar apartments nearby have actually sold for"><strong>Realūs rinkos sandoriai</strong>: už kiek iš tikrųjų parduoti panašūs butai šalia</li>
           </ul>
 
-          <h2>Kodėl internetinės skaičiuoklės klysta</h2>
-          <p>Internetinės skaičiuoklės vilioja greitu atsakymu, bet jos remiasi vidurkiais ir <strong>skelbiamomis</strong>, o ne realiai gautomis kainomis. Skelbiama kaina ir kaina, už kurią butas iš tikrųjų parduodamas, dažnai skiriasi. Todėl viena skaičiuoklė tam pačiam butui parodo vieną skaičių, o kita gali parodyti visai kitą.</p>
-          <p>Dar svarbiau: algoritmas nemato jūsų buto. Jis nežino, kad langai atgręžti į kiemą, o ne į gatvę, kad virtuvė ką tik atnaujinta arba kad name senas liftas. Būtent šios detalės ir nulemia galutinę NT kainą Vilniuje.</p>
-          <p class="article-pull">Skaičiuoklė parodo vidurkį. Pirkėjas moka už konkretų butą, o ne už vidurkį.</p>
+          <h2 data-en="Why online calculators get it wrong">Kodėl internetinės skaičiuoklės klysta</h2>
+          <p data-en="Online calculators tempt you with an instant answer, but they rely on averages and <strong>asking</strong> prices, not the prices actually achieved. The asking price and the price an apartment actually sells for are often two different numbers. That is why one calculator shows you one figure for the same apartment, while another shows something else entirely.">Internetinės skaičiuoklės vilioja greitu atsakymu, bet jos remiasi vidurkiais ir <strong>skelbiamomis</strong>, o ne realiai gautomis kainomis. Skelbiama kaina ir kaina, už kurią butas iš tikrųjų parduodamas, dažnai skiriasi. Todėl viena skaičiuoklė tam pačiam butui parodo vieną skaičių, o kita gali parodyti visai kitą.</p>
+          <p data-en="More importantly, an algorithm has never seen your apartment. It does not know that your windows face a quiet courtyard rather than the street, that the kitchen has just been renovated, or that the building has an ageing lift. It is precisely these details that decide the final price of property in Vilnius.">Dar svarbiau: algoritmas nemato jūsų buto. Jis nežino, kad langai atgręžti į kiemą, o ne į gatvę, kad virtuvė ką tik atnaujinta arba kad name senas liftas. Būtent šios detalės ir nulemia galutinę NT kainą Vilniuje.</p>
+          <p class="article-pull" data-en="A calculator shows you an average. A buyer pays for a specific apartment, not for an average.">Skaičiuoklė parodo vidurkį. Pirkėjas moka už konkretų butą, o ne už vidurkį.</p>
 
-          <h2>Kaip nustatau realią rinkos kainą</h2>
-          <p>Kai sprendžiu, kaip įkainoti butą, pradedu ne nuo skelbimų, o nuo realių sandorių. Peržiūriu, už kiek pastaruoju metu iš tikrųjų parduoti panašūs butai toje pačioje vietoje, ir prie to pridedu jūsų objekto stipriąsias bei silpnąsias puses. Taip gaunu ne teorinį vidurkį, o kainą, kurią rinka šiandien iš tikrųjų moka.</p>
-          <p>Tada įvertinu paklausą: kiek pirkėjų šiuo metu ieško būtent tokio buto ir kokia kaina pritrauks tinkamus žmones, o ne vien smalsuolius. Rezultatas: aiškus vertės intervalas ir rekomenduojama pradinė kaina, su kuria butas parduodamas greitai ir už didžiausią realią sumą.</p>
+          <h2 data-en="How I establish the real market price">Kaip nustatau realią rinkos kainą</h2>
+          <p data-en="When I price an apartment, I start not with the listings but with real transactions. I look at what similar apartments in the same location have actually sold for recently, then weigh in your property's strengths and weaknesses. The result is not a theoretical average but the price the market is genuinely paying today.">Kai sprendžiu, kaip įkainoti butą, pradedu ne nuo skelbimų, o nuo realių sandorių. Peržiūriu, už kiek pastaruoju metu iš tikrųjų parduoti panašūs butai toje pačioje vietoje, ir prie to pridedu jūsų objekto stipriąsias bei silpnąsias puses. Taip gaunu ne teorinį vidurkį, o kainą, kurią rinka šiandien iš tikrųjų moka.</p>
+          <p data-en="Then I assess demand: how many buyers are currently looking for exactly this kind of apartment, and what price will attract the right people rather than the merely curious. The outcome is a clear value range and a recommended starting price, one that sells the apartment quickly and for the highest realistic amount.">Tada įvertinu paklausą: kiek pirkėjų šiuo metu ieško būtent tokio buto ir kokia kaina pritrauks tinkamus žmones, o ne vien smalsuolius. Rezultatas: aiškus vertės intervalas ir rekomenduojama pradinė kaina, su kuria butas parduodamas greitai ir už didžiausią realią sumą.</p>
 
-          <h2>Kuo pavojinga per aukšta arba per žema kaina</h2>
-          <p>Per aukšta kaina atrodo kaip apsauga, bet iš tikrųjų veikia priešingai. Butas užsistovi rinkoje, praranda pirmąją dėmesio bangą ir galiausiai parduodamas pigiau, nei būtų parduotas, jei kaina iš karto būtų buvusi teisinga. Pirkėjai mato, kiek laiko skelbimas laikosi, ir pradeda derėtis žemyn.</p>
-          <p>Per žema kaina, priešingai, parduoda greitai, bet dalį vertės tiesiog padovanojate pirkėjui. Būtent todėl teisingas <strong>buto vertės nustatymas</strong> nuo pat pradžių yra svarbiausias sprendimas visame pardavimo procese. Tikslas yra ne didžiausias skaičius skelbime, o didžiausia suma, kuri realiai atsiduria jūsų sąskaitoje.</p>
+          <h2 data-en="The danger of pricing too high or too low">Kuo pavojinga per aukšta arba per žema kaina</h2>
+          <p data-en="An inflated price feels like a safety margin, but in practice it works against you. The apartment sits on the market, misses the first wave of attention, and ultimately sells for less than it would have if the price had been right from day one. Buyers can see how long a listing has been up, and they start negotiating downwards.">Per aukšta kaina atrodo kaip apsauga, bet iš tikrųjų veikia priešingai. Butas užsistovi rinkoje, praranda pirmąją dėmesio bangą ir galiausiai parduodamas pigiau, nei būtų parduotas, jei kaina iš karto būtų buvusi teisinga. Pirkėjai mato, kiek laiko skelbimas laikosi, ir pradeda derėtis žemyn.</p>
+          <p data-en="Price too low and the opposite happens: the apartment sells fast, but you simply hand part of its value to the buyer. That is why an accurate <strong>valuation</strong> at the very start is the single most important decision in the entire sale. The goal is not the biggest number in the listing, it is the biggest amount that actually lands in your account.">Per žema kaina, priešingai, parduoda greitai, bet dalį vertės tiesiog padovanojate pirkėjui. Būtent todėl teisingas <strong>buto vertės nustatymas</strong> nuo pat pradžių yra svarbiausias sprendimas visame pardavimo procese. Tikslas yra ne didžiausias skaičius skelbime, o didžiausia suma, kuri realiai atsiduria jūsų sąskaitoje.</p>
 
-          <h2>Kaip sužinoti, kiek vertas jūsų butas</h2>
-          <p>Greičiausias ir tiksliausias būdas atsakyti į klausimą „kiek vertas mano butas“ yra realus vertinimas, o ne skaičiuoklė. Apžiūriu jūsų butą, palyginu su realiais rinkos sandoriais ir pateikiu aiškų vaizdą, kiek jis vertas šiandien Vilniuje. Tai darau nemokamai, o jūs jau po pokalbio aiškiai suprasite savo galimybes.</p>
+          <h2 data-en="How to find out what your apartment is worth">Kaip sužinoti, kiek vertas jūsų butas</h2>
+          <p data-en="The fastest and most accurate way to answer the question ‘what is my apartment worth’ is a real valuation, not a calculator. I view your apartment, compare it against real market transactions and give you a clear picture of what it is worth in Vilnius today. This costs you nothing, and after one conversation you will know exactly where you stand.">Greičiausias ir tiksliausias būdas atsakyti į klausimą „kiek vertas mano butas“ yra realus vertinimas, o ne skaičiuoklė. Apžiūriu jūsų butą, palyginu su realiais rinkos sandoriais ir pateikiu aiškų vaizdą, kiek jis vertas šiandien Vilniuje. Tai darau nemokamai, o jūs jau po pokalbio aiškiai suprasite savo galimybes.</p>
         </div>
 
         <div class="article-cta">
-          <h3>Norite tikslaus savo turto įvertinimo?</h3>
-          <p>Pateiksiu realią vertę ir aiškiai išdėstysiu visas išlaidas. Atsakymas per 24 valandas.</p>
-          <a class="btn btn-clay" href="index.html#kontaktai">Užsisakyti vertinimą</a>
+          <h3 data-en="Want an accurate valuation of your property?">Norite tikslaus savo turto įvertinimo?</h3>
+          <p data-en="I will give you the real value and a clear breakdown of every cost. You will hear back within 24 hours.">Pateiksiu realią vertę ir aiškiai išdėstysiu visas išlaidas. Atsakymas per 24 valandas.</p>
+          <a class="btn btn-clay" href="index.html#contact-form" data-en="Request a valuation">Užsisakyti vertinimą</a>
         </div>
 
         <div class="article-back">
-          <a href="patarimai.html">← Visi patarimai</a>
+          <a href="patarimai.html" data-en="← All guides">← Visi patarimai</a>
         </div>
       </div>
     </article>
@@ -117,9 +127,13 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <a class="wordmark footer-brand" href="index.html">Bružas <b class="wm-nt">NT</b><span>Nekilnojamasis turtas · Vilnius</span></a>
-      <span class="footer-mid"><a href="patarimai.html">Patarimai</a> · ★★★★★ Google</span>
+      <a class="wordmark footer-brand" href="index.html">Bružas <b class="wm-nt">NT</b><span data-en="Real estate · Vilnius">Nekilnojamasis turtas · Vilnius</span></a>
+      <span class="footer-mid"><a href="patarimai.html" data-en="Guides">Patarimai</a> · ★★★★★ Google</span>
       <span class="footer-r">© 2026 · Capital Realty</span>
+      <div class="lang-pill lang-foot" role="group" aria-label="Kalba / Language">
+        <button type="button" class="lang-opt" data-lang="lt">LT</button>
+        <button type="button" class="lang-opt" data-lang="en">EN</button>
+      </div>
     </div>
   </footer>
 
@@ -130,6 +144,23 @@
     if (navToggle) navToggle.addEventListener('click', () => { const o = nav.classList.toggle('open'); navToggle.setAttribute('aria-expanded', o); });
     const nl = document.getElementById('navLinks');
     if (nl) nl.addEventListener('click', (e) => { if (e.target.tagName === 'A') nav.classList.remove('open'); });
+    // i18n: LT default, EN via data-en swap (shared key with homepage)
+    (() => {
+      const opts = Array.from(document.querySelectorAll('.lang-opt'));
+      const els = Array.from(document.querySelectorAll('[data-en]'));
+      els.forEach(el => { el.dataset.lt = el.innerHTML; });
+      let cur = 'lt';
+      const apply = (l) => {
+        cur = l === 'en' ? 'en' : 'lt';
+        els.forEach(el => { el.innerHTML = cur === 'en' ? el.getAttribute('data-en') : el.dataset.lt; });
+        document.documentElement.lang = cur;
+        opts.forEach(b => { const on = b.dataset.lang === cur; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+        try { localStorage.setItem('bruzas-lang', cur); } catch (e) {}
+      };
+      let s = null; try { s = localStorage.getItem('bruzas-lang'); } catch (e) {}
+      apply(s === 'en' ? 'en' : 'lt');
+      opts.forEach(b => b.addEventListener('click', () => apply(b.dataset.lang)));
+    })();
   </script>
   <a class="wa-float" href="https://m.me/kestutisbruzasNT" target="_blank" rel="noopener" aria-label="Rašyti per Messenger">
     <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.6 3 3 8.4 3 15.1c0 3.8 1.8 7.2 4.7 9.4V29l4.3-2.4c1.2.3 2.4.5 3.7.5 7.4 0 13-5.4 13-12.1S23.4 3 16 3zm1.3 16.3l-3.3-3.5-6.4 3.5 7-7.5 3.4 3.5 6.3-3.5-7 7.5z"/></svg>

@@ -58,6 +58,10 @@ em { font-style: italic; color: var(--emerald); font-weight: 500; }
 .nav.scrolled .btn-line:hover { background: var(--emerald); color: var(--paper); border-color: var(--emerald); box-shadow: none; }
 .btn-block { width: 100%; }
 
+/* anchored jumps land clear of the fixed nav */
+section[id] { scroll-margin-top: 64px; }
+#contact-form { scroll-margin-top: 92px; }
+
 /* ===== NAV ===== */
 .nav { position: fixed; inset: 0 0 auto 0; z-index: 900; transition: background .4s var(--ease), box-shadow .4s; }
 .nav-inner { max-width: 1340px; margin: 0 auto; padding: 24px clamp(22px, 5vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
