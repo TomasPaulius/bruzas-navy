@@ -1,4 +1,4 @@
-# Kęstutis Bružas — allow all crawlers, including AI / answer engines
+# Kestutis Bruzas: allow all crawlers, including AI / answer engines
 User-agent: *
 Allow: /
 
